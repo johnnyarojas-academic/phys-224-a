@@ -159,5 +159,155 @@ Differences on today's lab.
 
 \end_layout
 
+\begin_layout Section*
+Converging Lens
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image.png
+	lyxscale 30
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Divergent Lens
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image (2).png
+	lyxscale 50
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Maker Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image (3).png
+	lyxscale 50
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Refraction Values for Mediums
+\end_layout
+
+\begin_layout Itemize
+Air:
+ 
+\begin_inset Formula $\frac{1}{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Glass:
+ 
+\begin_inset Formula $\frac{3}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Water:
+ 
+\begin_inset Formula $\frac{4}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=1.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|R_{1}|=|R_{2}|=R=?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f=20cm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{20}=0.5\cdot(\frac{1}{R}+\frac{1}{R})=\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Mirror Equation (Reflected Rays)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f=\frac{R}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image (4).png
+	lyxscale 50
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Magnification
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=\frac{\overrightarrow{image}}{\overrightarrow{object}}=-\frac{d_{i}}{d_{o}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Notes:
+\end_layout
+
+\begin_layout Standard
+4.
+ 
+\end_layout
+
 \end_body
 \end_document

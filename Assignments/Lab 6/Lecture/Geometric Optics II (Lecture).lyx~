@@ -1,0 +1,304 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children no
+\language american
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Geomtric Objects II (Lecture)
+\end_layout
+
+\begin_layout Section*
+Thin Lenses and Thick Lenses
+\end_layout
+
+\begin_layout Standard
+There is no real thin lenses in the real world because this is an idealized version,
+ in reality all lenses have a thickness to them for them to refract the light rays.
+ There exist two types of lenses:
+\end_layout
+
+\begin_layout Itemize
+Convergent Lenses
+\begin_inset Newline newline
+\end_inset
+
+They focus (converge) the light rays at a single point
+\end_layout
+
+\begin_layout Itemize
+Divergent Lenses
+\begin_inset Newline newline
+\end_inset
+
+They deflect (diverge) the light rays away from the convergence point.
+\end_layout
+
+\begin_layout Section*
+Differences on today's lab.
+\end_layout
+
+\begin_layout Itemize
+1st:
+ We will use the thin lens equation.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{f}=\frac{1}{d_{o}}+\frac{1}{d_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+2nd:
+ Lens maker's equation (Equation that models a real lens)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{f}=(m-1)(\frac{1}{R_{1}}\pm\frac{1}{R_{2}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+3rd:
+ Renew for a mirror
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f=\frac{R}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Converging Lens
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image.png
+	lyxscale 30
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Divergent Lens
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image (2).png
+	lyxscale 50
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Maker Equation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image (3).png
+	lyxscale 50
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Refraction Values for Mediums
+\end_layout
+
+\begin_layout Itemize
+Air:
+ 
+\begin_inset Formula $\frac{1}{1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Glass:
+ 
+\begin_inset Formula $\frac{3}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Water:
+ 
+\begin_inset Formula $\frac{4}{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=1.5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $|R_{1}|=|R_{2}|=R=?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f=20cm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{20}=0.5\cdot(\frac{1}{R}+\frac{1}{R})=\frac{1}{R}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Mirror Equation (Reflected Rays)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f=\frac{R}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Pasted image (4).png
+	lyxscale 50
+	width 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Magnification
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m=\frac{\overrightarrow{image}}{\overrightarrow{object}}=-\frac{d_{i}}{d_{o}}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
