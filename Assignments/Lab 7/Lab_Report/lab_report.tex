@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+
+% Basic packages
+\usepackage[utf8]{inputenc}   % UTF-8 encoding
+\usepackage{geometry}         % Page margins
+\usepackage{setspace}         % Double spacing
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx}         % Include images
+\usepackage{booktabs}         % Nice tables
+\usepackage{enumitem}         % Custom lists
+
+% Page setup: 1-inch margins
+\geometry{
+  letterpaper,
+  margin=1in
+}
+
+% Double spacing
+\doublespacing
+
+% START OF DOCUMENT %
+\begin{document}
+
+\begin{center}
+    {\textbf{Johnny A. Rojas \& Aiden Sitorus, George Nicacio}}\\
+    {\Large \textbf{LAB REPORT: HUMAN EYE, A BIOPHYSICS LABORATORY}}
+\end{center}
+
+\section{Overarching Goal}
+% Briefly state the main goal of the lab
+The human eye can be described as a complex optical instrument that focuses
+light rays using a muscular tissue (the eye lens) and a light-sensitive layer
+that converts the focused light into electrical signals transmitted to the
+brain.  The focus of this lab report is to utilize the knowledge of our previous
+labs on geometriclens modeling to apply it at a fundamental level to generalize
+the behaviour of the human eye and study is relation to common eye disseases.
+
+\section{Theory}
+% Explain the physics concepts behind the lab. Include relevant equations if needed.
+As light travels through space, its interaction with matter affects the speed at
+which the electromagnetic waves that carry it move through a medium. These
+interactions produce refraction, a phenomenon that can be described at the
+macroscopic scale by Snell’s law, $n_1sin(\theta_1)=n_2sin(\theta_2)$, where $n_1$
+and $n_2$ are the indices of refraction of the two media, and $\theta_1$ and $\theta_2$
+are the angles measured with respect to the normal to the surface. Rather than
+tracking individual light–matter interactions, this description allows the
+overall bending of light to be predicted using simple geometric relationships.
+
+In the geometrical optics approximation, the propagation of light through
+refracting surfaces is modeled using rays, which trace the direction of light
+and provide an intuitive picture of how images are formed. This ray-based model
+makes it possible to describe complex optical systems using a small set of
+distances and angles. When applied to ideal lenses and restricted to small
+angles relative to the optical axis, these relationships reduce to the thin-lens
+equation:
+
+$$ \frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}  $$ where:
+\begin{itemize}
+  \item $f$ is the focal length (in $m$)
+  \item $d_o$ is the object distance (in $m$)
+  \item $d_i$ is the image distance (in $m$)
+\end{itemize}
+
+This equation provides a direct way to predict where an image will form once
+the focal length of the lens is known.
+
+The focal length itself depends on the physical properties of the lens. This
+dependence is described by the lens maker’s equation,
+
+$$ \frac{1}{f} = (n - 1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right) $$ where:
+\begin{itemize}
+  \item $n$ is the index of refraction of the lens material and
+  \item $R_1$ and $R_2$ are the radii of curvature of the lens surfaces.
+\end{itemize}
+
+
+
+Although highly simplified, together these model captures the essential behavior of many
+real optical systems. In particular, it provides a useful framework for
+understanding the human eye as an imaging system, where changes in lens shape
+and focal length determine how light is brought into focus on the retina. In the
+case of the human eye, the lens is flexible, and surrounding muscles can change
+its curvature. By altering the radii of curvature, the eye effectively changes
+its focal length, allowing objects at different distances to be brought into
+focus on the retina.
+
+\section{Apparatus}
+
+\subsection{Homemade Eye Model}
+Our setup for this section consisted of a ``screen'' (a plane where the light
+was focused), a convex lens placed $20\,\text{cm}$ from the screen, and an
+object placed $22.5\,\text{cm}$ from the convex lens. All measurements were
+conducted in a dark environment to allow for greater precision.
+
+\subsection{Variable Lens Model}
+
+\subsubsection*{Fixed Lens Test}
+Before beginning the experiment, we tested the PASCO eye model by placing a
+$400\,\text{mm}$ focal length lens in the SEPTUM slot and positioning an object
+$50\,\text{cm}$ from the lens.
+
+\subsubsection*{Variable Lens}
+Afterwards, the variable lens was filled with water until its membrane was flat.
+The connecting tube was then attached to a syringe, which was filled
+approximately three-quarters full. The tube was reconnected to the variable
+lens, replacing the previous $400\,\text{mm}$ lens in the setup.
+
+
+\section{Purpose of Each Activity}
+
+\subsection*{Activity 1.}
+To construct a simplified physical model of the human eye and establish its
+correspondence with the geometrical optics framework introduced in the theory
+section, identifying how the retina, lens, and optical axis are represented
+within the thin-lens approximation.
+
+\subsection*{Activity 2.}
+To incorporate a variable-focus lens into the eye model in order to simulate
+the eye’s ability to accommodate, directly applying the thin-lens equation to
+demonstrate how changes in focal length affect image formation on the retina.
+
+\subsection*{Activity 3.}
+To quantitatively determine the magnitude of the focal length adjustment
+required for proper retinal imaging, using the thin-lens equation to relate
+object distance, image distance, and lens focal length in the context of the
+human eye.
+
+\subsection*{Activity 4.}
+To analyze common eye diseases by interpreting them as deviations from the
+idealized optical model, using the thin-lens and lens maker’s equations to
+understand how changes in curvature or effective focal length lead to impaired
+vision.
+
+\section{Method}
+% Step-by-step procedure
+\begin{enumerate}
+    \item Step 1
+    \item Step 2
+    \item Step 3
+\end{enumerate}
+
+\section{Data}
+% Include independent, dependent, and control variables
+\subsection{Variables and Hypothesis}
+\begin{itemize}
+    \item \textbf{Independent Variable:}
+    \item \textbf{Dependent Variable:}
+    \item \textbf{Control Variables:}
+    \item \textbf{Hypothesis:}
+\end{itemize}
+
+\subsection{Measured Data}
+% Example table
+\begin{table}[h!]
+\centering
+\caption{Measured Data}
+\begin{tabular}{lcc}
+\toprule
+Quantity & Value & Units \\
+\midrule
+Sample 1 & 0.00 & m \\
+Sample 2 & 0.00 & m \\
+% Add more rows as needed
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Include graphs or figures if needed
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=0.7\textwidth]{graph.png}
+%\caption{Caption describing the figure.}
+%\end{figure}
+
+\section{Calculations}
+% Show your calculations, formulas, and any manipulations
+\begin{align*}
+% Example formula
+y &= mx + b
+\end{align*}
+
+\section{Results}
+% State final results with units and errors
+\begin{itemize}
+    \item Result 1: 0.00 units
+    \item Result 2: 0.00 units
+    \item Absolute/Percent Error: 0\%
+\end{itemize}
+
+\section{Conclusion \& Questions}
+% Summarize whether the goal was achieved
+% Discuss sources of error
+\begin{itemize}
+    \item Conclusion point 1
+    \item Conclusion point 2
+\end{itemize}
+
+\subsection*{Questions}
+\begin{enumerate}[label=\arabic*.]
+    \item Answer to question 1
+    \item Answer to question 2
+\end{enumerate}
+
+\section{Above and Beyond}
+% Optional extra analysis, insights, or experiments
+
+\end{document}
