@@ -133,20 +133,173 @@ vision.
 
 \section{Method}
 % Step-by-step procedure
-\begin{enumerate}
-    \item Step 1
-    \item Step 2
-    \item Step 3
-\end{enumerate}
+
+\subsection{Activity 1: Construction of a Simple Eye Model}
+
+\begin{itemize}
+  \item A converging (biconvex) lens was mounted along an optical axis to represent the crystalline lens of the human eye.
+  \item A translucent screen was placed at a fixed distance behind the lens to model the retina.
+  \item An illuminated object was positioned in front of the lens at varying distances to serve as the object being imaged by the eye.
+  \item The relative positions of the object, lens, and screen were adjusted until a clear image was formed on the screen.
+  \item The orientation and nature (real or virtual) of the image formed on the screen were observed and recorded.
+  \item The object distance was varied while maintaining the screen position fixed, and changes in image sharpness were qualitatively analyzed.
+  \item Observations were interpreted using the thin-lens equation to determine which optical parameters must change in a real eye to maintain focus.
+\end{itemize}
+
+\subsection{Activity 2: Simulation of Eye Accommodation}
+
+\begin{itemize}
+  \item A PASCO eye model was assembled with the retina placed in the slot labeled \textit{NORMAL}.
+  \item A fixed converging lens was initially inserted to represent the combined effect of the cornea and eye lens.
+  \item An illuminated cell phone screen was positioned approximately $50\,\text{cm}$ from the cornea, and its position was adjusted until a focused image was obtained on the retina.
+  \item The object was translated laterally and longitudinally to observe changes in image position and focus.
+  \item The fixed lens was removed and replaced with an adjustable-focus lens filled with water.
+  \item Air bubbles were removed from the adjustable lens to ensure uniform refraction.
+  \item The object distance was set to approximately $25\,\text{cm}$, and the lens curvature was adjusted using the syringe until a sharp retinal image was obtained.
+  \item The procedure was repeated for an object distance of approximately $50\,\text{cm}$.
+  \item Changes in lens power required for near and far vision were recorded and analyzed.
+\end{itemize}
+
+\subsection{Activity 3: Quantitative Analysis of Eye Accommodation}
+
+\begin{itemize}
+  \item Relevant anatomical and optical parameters of the human eye obtained from preliminary work were identified.
+  \item The lens maker’s equation was used to model the dependence of focal length on the radii of curvature of the eye lens.
+  \item The posterior radius of curvature was held constant while the anterior radius was varied over a defined range.
+  \item For each radius configuration, the corresponding focal length was calculated.
+  \item The results were tabulated to examine how small changes in curvature affect the focal length.
+  \item Trends in the data were analyzed to distinguish between fine and coarse tuning mechanisms in eye accommodation.
+\end{itemize}
+
+\subsection{Activity 4: Modeling Common Eye Diseases}
+
+\begin{itemize}
+  \item The PASCO eye model was configured to simulate normal vision using an appropriate converging lens and retina position.
+  \item To model hyperopia, the retina was moved forward to shorten the effective eye length, and the resulting image blur was observed.
+  \item A pupil aperture was inserted to study the effect of pupil size on image clarity.
+  \item Corrective lenses of varying power were introduced to restore focus, and the optimal lens power was determined.
+  \item To model myopia, the retina was moved backward to lengthen the effective eye length.
+  \item The image formation for distant objects was analyzed under this configuration.
+  \item Diverging or weakly converging corrective lenses were tested to compensate for the altered focal conditions.
+  \item Observations were interpreted using the thin-lens and lens maker’s equations to relate anatomical changes to optical defects.
+\end{itemize}
 
 \section{Data}
-% Include independent, dependent, and control variables
-\subsection{Variables and Hypothesis}
+
+\subsection{Activity 1: Simple Eye Model}
+
 \begin{itemize}
     \item \textbf{Independent Variable:}
+    \begin{itemize}
+        \item Object distance from the lens ($d_o$)
+    \end{itemize}
+
     \item \textbf{Dependent Variable:}
+    \begin{itemize}
+        \item Image position relative to the screen (retina)
+        \item Image clarity on the screen
+    \end{itemize}
+
     \item \textbf{Control Variables:}
+    \begin{itemize}
+        \item Lens type and focal length
+        \item Fixed distance between lens and screen
+        \item Optical alignment of the system
+    \end{itemize}
+
     \item \textbf{Hypothesis:}
+    \begin{itemize}
+        \item If the object distance changes while the screen position remains
+        fixed, the image will fall out of focus unless the focal length of the
+        lens changes, consistent with the thin-lens equation.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Activity 2: Eye Accommodation}
+
+\begin{itemize}
+    \item \textbf{Independent Variable:}
+    \begin{itemize}
+        \item Object distance from the eye model
+        \item Curvature (power) of the adjustable eye lens
+    \end{itemize}
+
+    \item \textbf{Dependent Variable:}
+    \begin{itemize}
+        \item Image sharpness on the retina
+        \item Lens power required for proper focus
+    \end{itemize}
+
+    \item \textbf{Control Variables:}
+    \begin{itemize}
+        \item Retina position set to \textit{NORMAL}
+        \item Light source intensity
+        \item Eye model configuration
+    \end{itemize}
+
+    \item \textbf{Hypothesis:}
+    \begin{itemize}
+        \item Decreasing the object distance requires an increase in the optical
+        power of the eye lens to maintain focus on the retina.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Activity 3: Quantitative Accommodation Analysis}
+
+\begin{itemize}
+    \item \textbf{Independent Variable:}
+    \begin{itemize}
+        \item Radius of curvature of the anterior lens surface ($R_1$)
+    \end{itemize}
+
+    \item \textbf{Dependent Variable:}
+    \begin{itemize}
+        \item Calculated focal length of the eye lens ($f$)
+    \end{itemize}
+
+    \item \textbf{Control Variables:}
+    \begin{itemize}
+        \item Posterior radius of curvature ($R_2$)
+        \item Index of refraction of the lens material
+    \end{itemize}
+
+    \item \textbf{Hypothesis:}
+    \begin{itemize}
+        \item Small changes in the anterior radius of curvature produce measurable
+        changes in focal length, enabling fine tuning of eye accommodation as
+        predicted by the lens maker’s equation.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Activity 4: Modeling Eye Diseases}
+
+\begin{itemize}
+    \item \textbf{Independent Variable:}
+    \begin{itemize}
+        \item Retina position within the eye model
+        \item Power of corrective lenses
+        \item Pupil aperture size
+    \end{itemize}
+
+    \item \textbf{Dependent Variable:}
+    \begin{itemize}
+        \item Image clarity on the retina
+        \item Corrective lens power required for clear vision
+    \end{itemize}
+
+    \item \textbf{Control Variables:}
+    \begin{itemize}
+        \item Object distance (near or far)
+        \item Eye model alignment
+        \item Light source characteristics
+    \end{itemize}
+
+    \item \textbf{Hypothesis:}
+    \begin{itemize}
+        \item Altering the effective eye length causes defocus that can be
+        compensated by lenses of appropriate optical power, consistent with
+        thin-lens predictions for myopia and hyperopia.
+    \end{itemize}
 \end{itemize}
 
 \subsection{Measured Data}
