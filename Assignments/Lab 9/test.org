@@ -1,0 +1,2 @@
+#+title: Ohm's Law
+the resistor which resitance is R cough will drive a current I if its two ends are under potential differnece deltaV and that current I is drive by DeltaV over R.
