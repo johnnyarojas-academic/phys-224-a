@@ -1,0 +1,428 @@
+\documentclass[12pt]{article}
+% Basic packages
+\usepackage[utf8]{inputenc}   % UTF-8 encoding
+\usepackage{geometry}         % Page margins
+\usepackage{setspace}         % Double spacing
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx}         % Include images
+\usepackage{booktabs}         % Nice tables
+\usepackage{enumitem}         % Custom lists
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{float}
+
+% Page setup: 1-inch margins
+\geometry{
+  letterpaper,
+  margin=1in
+}
+
+% Double spacingp
+\doublespacing{}
+
+% START OF DOCUMENT %
+\begin{document}
+
+\begin{center}
+    {\textbf{Johnny A. Rojas \& Aiden Sitorus, George Nicacio, Jeremiah
+        Hasibuan, Matthew Miller}}\\
+    {\Large \textbf{LAB REPORT: ELECTRIC FIELD AND EQUIPOTENTIALS}}
+\end{center}
+
+\section{Theory}
+\subsection*{From Vector Fields to Electric Potential}
+
+In physics, vector fields are mathematical tools that allow us to visualize how
+a physical quantity with both magnitude and direction behaves throughout space.
+Rather than describing a single interaction, a field describes how one object
+influences every possible point in its surroundings. This perspective allows a
+single equation to encode the structure of a physical interaction in space.
+
+A natural starting point for understanding electric fields is gravitation.
+Two objects with mass attract each other with a force proportional to the
+product of their masses and inversely proportional to the square of the
+distance between their centers of mass:
+
+\begin{align*}
+F_G = G \frac{M m}{R^2}
+\end{align*}
+
+where $G$ is the universal gravitational constant.
+
+The inverse–square dependence is not accidental. As distance increases,
+the interaction spreads over larger spherical surfaces, producing the
+$1/R^2$ behavior. This geometric interpretation will later help us understand
+electric fields.
+
+\subsubsection*{From Force to Gravitational Field}
+
+Instead of focusing only on the interaction between two masses, we divide
+the force by one of the masses. This removes dependence on the test mass
+and isolates a quantity that depends only on the source mass and position:
+
+\begin{align*}
+g = \frac{F_G}{m} = G \frac{M}{R^2}
+\end{align*}
+
+The quantity $g$ is the gravitational field — a vector field describing
+acceleration due to gravity at every point in space.
+
+At the Earth's surface:
+
+\begin{align*}
+g_0 = G \frac{M_{\text{Earth}}}{R_{\text{Earth}}^2}
+\end{align*}
+
+At altitude $H$, where $R = R_{\text{Earth}} + H$:
+
+\begin{align*}
+g = G \frac{M_{\text{Earth}}}{(R_{\text{Earth}} + H)^2}
+\end{align*}
+
+Once the field is known, the force follows immediately:
+
+\begin{align*}
+F_G = m g
+\end{align*}
+
+\subsubsection*{Gravitational Potential Energy}
+
+Because gravity acts at a distance, an object placed in the field possesses
+gravitational potential energy.
+
+With respect to the Earth's surface:
+
+\begin{align*}
+GPE = m g H
+\end{align*}
+
+With respect to the Earth's center:
+
+\begin{align*}
+GPE = m g (R_{\text{Earth}} + H) = m g R
+\end{align*}
+
+Since $F_G = m g$, we may also write:
+
+\begin{align*}
+GPE = F_G R
+\end{align*}
+
+We now see the mathematical progression
+$F_G \rightarrow g \rightarrow GPE$:
+force leads to field, and field leads to potential energy.
+
+\subsection*{The Electrical Analogy}
+
+Charge particles also interact through a force at distance described by
+Coulomb’s Law:
+
+\begin{align*}
+F_E = \frac{1}{4\pi\epsilon_0} \frac{q_1 q_2}{r^2}
+\end{align*}
+
+or equivalently,
+
+\begin{align*}
+F_E = k \frac{Q q}{R^2}
+\end{align*}
+
+where $k \approx 9 \times 10^9 \, \text{N·m}^2/\text{C}^2$ in vacuum.
+
+Structurally, this mirrors gravitation:
+$(Q, q) \leftrightarrow (M, m)$ and $k \leftrightarrow G$.
+Both forces obey an inverse–square law, although electric forces may be
+attractive or repulsive depending on the signs of the charges.
+
+\subsubsection*{Vector Form and the Electric Field}
+
+To fully describe the interaction, we introduce direction using the unit
+vector $\hat{r}$:
+
+\begin{align*}
+\vec{F}_E =
+\frac{1}{4\pi\epsilon_0}
+\frac{q_1 q_2}{r^2} \hat{r}
+\end{align*}
+
+An important conceptual shift occurs when we divide the force by one of the
+charges. In doing so, we separate the mutual interaction from the influence
+of the source charge. Dividing by the test charge $q$:
+
+\begin{align*}
+\vec{E} = \frac{\vec{F}_E}{q}
+= \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2} \hat{r}
+\end{align*}
+
+This defines the electric field $\vec{E}$.
+
+Here:
+\begin{itemize}
+  \item $\vec{E}$ has units of N/C,
+  \item $Q$ is the source charge,
+  \item $r$ is the distance from the source,
+  \item $\hat{r}$ determines direction.
+\end{itemize}
+
+This reflects the earlier gravitational reasoning: just as $g$ describes the
+influence of a mass independently of the test mass, $\vec{E}$ describes the
+influence of a charge independently of any test charge.
+
+The direction of $\vec{E}$ is defined as the direction a positive test charge
+would move. Electric field lines diverge from positive charges and converge
+toward negative charges. Unlike gravity, the electric interaction can be
+repulsive as well as attractive.
+
+\subsubsection*{Electric Potential Energy and Electric Potential}
+
+Continuing the analogy, electric potential energy is defined as
+
+\begin{align*}
+EPE = F_E R
+\end{align*}
+
+Substituting Coulomb’s law:
+
+\begin{align*}
+EPE = k \frac{Q q}{R}
+\end{align*}
+
+Since $E = k Q / R^2$, we may also write:
+
+\begin{align*}
+EPE = q E R
+\end{align*}
+
+Another fundamental electrostatic relation states
+
+\begin{align*}
+EPE = q V
+\end{align*}
+
+where $V$ is the electric potential (voltage), measured in volts.
+
+This leads to another expression for the electric field:
+
+\begin{align*}
+E = -\frac{\Delta V}{\Delta x}
+\end{align*}
+
+This equation shows that the electric field is the negative gradient of the
+electric potential. Therefore, the electric field has another equivalent unit:
+
+$1 \ \text{N/C} = 1 \ \text{V/m}$.
+
+Conceptually, the electric field describes how rapidly electric potential
+changes in space. It points in the direction of steepest decrease of
+potential, analogous to the slope of a hill.
+
+\subsection*{Connection to the Experiment}
+
+In the laboratory, extended charge distributions are modeled using electrodes.
+Regions under the same electric potential are called equipotential regions.
+If $\Delta V \neq 0$, then $E \neq 0$.
+
+Rather than measuring force directly, we measure potential differences
+between nearby points using a multimeter. From these measurements, we
+calculate the electric field using
+
+\begin{align*}
+E = -\frac{\Delta V}{\Delta x}
+\end{align*}
+
+Thus the experiment completes the conceptual path:
+
+$F_E \rightarrow \vec{E} \rightarrow EPE \rightarrow V$.
+
+We began with inverse–square forces and arrived at a measurable scalar
+quantity whose spatial variation generates a vector field.
+
+\section{Conclusion}
+
+\subsection*{Activity 1}
+Our results in Activity 1 demonstrated that the data follows a curved behavior,
+increasing significantly near the electrodes and remaining close to zero near
+the center. This matches our theoretical expectation for two opposite charges,
+where the electric field is strongest close to the charges and weaker near the
+midpoint due to symmetry. The non-linear shape of the graph is consistent with
+the dipole-like configuration predicted by theory.
+
+\subsection*{Activity 2}
+Our results in Activity 2 demonstrated that the data follows the prediction of
+the magnitude being approximately constant regardless of the position at which
+the electric field is measured. We measured a slope of $-0.0036$, which compared
+to the expected slope of $0$, gives an absolute error of $0.0036$. The $R^2$
+value of $0.0004$ further supports that there is no significant linear
+dependence on position. This agrees with the theoretical prediction of a nearly
+uniform electric field between parallel electrodes.
+
+\subsection*{Activity 3}
+In Activity 3 we observed a strong agreement between our measurements and the
+theoretical cylindrical relationship $E \propto \frac{1}{r}$. From our power
+fit, we measured an exponent of $-1.01$. Compared to the expected value of $-1$,
+this corresponds to an absolute error of $0.01$, or approximately $1\%$ error.
+The $R^2$ value of $0.8841$ indicates a strong correlation with the predicted
+inverse radial dependence. This confirms the expected cylindrical symmetry of
+the electric field in this configuration.
+
+Small differences between theoretical and experimental values are likely due to
+systematic errors such as probe positioning, finite electrode size, non-ideal
+conductivity of the carbon paper, and slight asymmetries in the setup.
+
+
+% Key: final results of each activities: slope, power, coefficient, etc. Do not
+% report any graph or chart!!! was the experiment successful or not?
+
+% Must:
+
+% - Report the values or numbers that were MEASURED, their expected or known
+%   values if applicable, and their absolute or/and percent errors, R^2,
+%   Standard deviations, standard errors if applicable. Saying "the experiment was
+%   successful with 5% error" is not acceptable because it misses the measured
+%   value and the expected value. It should have been "Our measured power was
+%   0.475 whereas the expected power is 0.5. The experiment was successful with 5%
+%   error."
+
+% - Discuss the kind of errors: systematic or random and explain. Here, you can
+%   refer to the charts (without reporting the charts). You can say that most of
+%   the measured values were below the expected for example.
+
+% - List out the source or errors and be specific. Do not just say "the frictions
+%   created errors", rather say "the frictions between the wheels and the axles
+%   created errors".
+
+% - Then, state the biggest source of errors and how it could be avoided.
+
+% - Address the outliers if any, Also, explain why you rejected a data if you did.
+
+% - You may suggest a way to improve the experiment. That will be always
+%   appreciated.
+
+% Strategy: do the above for each activity as one activity might be successful but
+% the other had an issue, then end with an overall evaluation.
+
+\section{Questions}
+% Key: they are in khpContent
+
+% Must: Itemize the answers. For example:
+
+% - Activity #1, question 2-a
+
+% - Activity #3, question 3
+
+% Strategy: Most often, you find these questions in interrogative forms ending
+% with a question mark "?" But sometimes the questions are in indirect forms so
+% be watchful. Never write "See Excel file", just make a copy of the Excel file
+% and report it again.
+\subsection*{Activity 1}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Tables/table1.png}
+  \caption{Table 1.}
+\end{figure}
+
+\begin{description}
+
+\item[Question 1.a:] How does the graph look?
+
+        The graph of $\Delta V$ versus position is nonlinear. The magnitude
+        of $\Delta V$ is greater near each electrode and smaller near the
+        midpoint. This occurs because the electric field is stronger close to
+        the electrodes and weaker between them due to the superposition of two
+        opposite charges.
+
+  \item[Question 1.b:] What would be the appropriate trendline?
+
+        The appropriate trendline is nonlinear and consistent with an
+        inverse-square dependence. Since the electric field from each electrode
+        follows $E \propto 1/r^2$, the combined field reflects dipole-like
+        behavior rather than a linear relationship.
+
+  \item[Question 1.c:] Because $\Delta x = 1\,\text{cm}$, how does $\Delta V$
+        relate to the electric field?
+
+        Since $E = -\frac{dV}{dx}$, and $\Delta x$ is constant, the electric
+        field is approximately $E \approx -\frac{\Delta V}{\Delta x}$.
+        Therefore, $\Delta V$ is directly proportional to the magnitude of the
+        electric field.
+
+  \item[Question 1.d:] What does the slope of the graph represent?
+
+        The slope of the potential versus position graph represents the negative
+        of the electric field. A steeper slope corresponds to a stronger
+        electric field.
+
+\end{description}
+
+\subsection*{Activity 2}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Tables/table2.png}
+  \caption{Table 2.}
+\end{figure}
+
+\begin{description}
+
+\item[Question 2.a:] What is the difference from the previous results?
+
+        Unlike the nonlinear behavior observed with point-like electrodes, the
+        potential between parallel plate electrodes varies linearly with
+        position. The electric field between the plates is approximately
+        uniform.
+
+\item[Question 2.b:] What would be the appropriate trendline?
+
+        A linear trendline is appropriate. Since the electric field between
+        parallel plates is constant, the potential varies proportionally with
+        distance.
+
+\end{description}
+
+\subsection*{Activity 3}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{Tables/table3.png}
+  \caption{Table 3.}
+\end{figure}
+
+\begin{description}
+
+\item[Question 3.a:] Compare your results to the two previous ones.
+
+        In the cylindrical configuration, the electric field decreases with
+        radial distance approximately as $E \propto 1/r$. The potential varies
+        logarithmically with distance. This behavior differs from the
+        inverse-square dependence of point charges and the uniform field of
+        parallel plates. The geometry of the electrodes determines how the
+        electric field varies in space.
+
+\end{description}
+
+\section{Above and Beyond}
+% Key: Say how does this apply for real life, or give more historical/technical
+% background, or anything not covered in class that relates to this specific lab
+% topic.
+
+% Must: A & B should touch at least one aspect of the lab topic. Please do not
+% forget the citation if applicable (no required format).
+
+% Strategy: Make it short: A & B does have to be "physics" in nature. So find
+% some keywords: name(s) of the scientist(s), year of the inventions. You can
+% also consider extra-work on the lab as an A & B.\usepackage{float}
+
+Although this lab focuses on calculating electric fields from simple charge
+distributions, the underlying mathematics is a powerful tool that extends far
+beyond electrostatics. Using integrals to sum contributions from continuous
+charges not only allows us to find the field of an infinite plane or a ring, but
+also provides a foundation for more advanced topics such as electromagnetic
+waves and gravitational fields. For example, the same principles of vector
+addition and $1/r^2$ forces appear in Newton’s law of gravitation, while in wave
+theory, superposition and field integration are essential for understanding
+interference and diffraction patterns. This shows how a relatively simple
+concept—summing the influence of many sources—can be applied across many areas
+of physics.
+
+\end{document}
