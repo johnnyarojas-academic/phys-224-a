@@ -1,0 +1,148 @@
+#+title: Physics For Scientist And Engineers II Lab Weekender
+
+#+TITLE: Course Schedule: Winter 2026 Gen Physics Lab II (PHYS-214-A, PHYS-224-A)
+
+* TODO Lab Report General Requirements
+** TODO Document Components
+*** TODO Title of the lab
+*** TODO Your name
+*** TODO Lab partners' names
+*** TODO Theory
+*** TODO Conclusion
+*** TODO Questions
+*** TODO Above & Beyond
+** TODO Submission Checklist
+*** TODO Word Docx
+*** TODO PDF of Word Doc
+*** TODO Excel file
+*** TODO PDF of Excel file
+*** TODO Filename check: Include first or last name
+
+* TODO Lab: Diffraction of Electromagnetic wave
+** TODO Session Tasks
+*** TODO 1st week Title, Objective, and Equipment
+*** TODO Purpose of activities, Method, and Results
+** TODO Assignments & Quizzes
+*** TODO Participation to Electromagnetic waves
+*** TODO Preliminary Work (Due: Wednesday, Jan 14, 2026)
+*** TODO Pre-lab quiz
+*** TODO Post-lab quiz
+*** TODO Submit Lab Report (Due: Sunday, Jan 18, 2026)
+
+* TODO Lab: Geometric Optics I
+** TODO Session Tasks
+*** TODO 2nd week Title, Objective, Equipment (Due: Monday, Jan 19, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, Jan 19, 2026)
+** TODO Assignments & Quizzes
+*** TODO Preliminary work (Submit in khpcontent.com)
+*** TODO Drawing submission for preliminary work (eClass)
+*** TODO Submit Lab Report (Due: Sunday, Jan 25, 2026)
+*** TODO Note: Do not follow standard format; answer questions instead
+
+* TODO Lab: Geometric Optics II
+** TODO Session Tasks
+*** TODO 3rd week Title, Objective, Equipment (Due: Monday, Jan 26, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, Jan 26, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation to Geom Opt 2
+*** TODO Preliminary work for Geo Optics II
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, Feb 1, 2026)
+
+* TODO Lab: Human eye model
+** TODO Session Tasks
+*** TODO 4th session Title, Objective, Equipment (Due: Monday, Feb 2, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, Feb 2, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation for Human eye model
+*** TODO Preliminary work (khpcontent.com)
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, Feb 8, 2026)
+
+* TODO Lab: Electric Field and equipotentials
+** TODO Session Tasks
+*** TODO 5th session Title, Objective, Equipment (Due: Monday, Feb 9, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, Feb 9, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation for Electric field
+*** TODO Preliminary work for Electric field
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, Feb 15, 2026)
+
+* TODO Lab: Ohm's law
+** TODO Session Tasks
+*** TODO 6th session Title, Objective, Equipment (Due: Monday, Feb 16, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, Feb 16, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation for Ohm's law
+*** TODO Preliminary work (khpcontent.com)
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, Feb 22, 2026)
+
+* TODO Lab: Kirchhoff's rules
+** TODO Session Tasks
+*** TODO 7th session Title, Objective, Equipment (Due: Monday, Feb 23, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, Feb 23, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation for Kirchhoff's rules
+*** TODO Preliminary work (khpcontent.com)
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, March 1, 2026)
+
+* TODO Lab: RC time constant
+** TODO Session Tasks
+*** TODO 8th session Title, Objective, Equipment (Due: Monday, March 2, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, March 2, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation for RC time constant
+*** TODO Preliminary work (khpcontent.com)
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, March 8, 2026)
+
+* TODO Lab: Axon as electrical circuits
+** TODO Session Tasks
+*** TODO 9th session Title, Objective, Equipment (Due: Monday, March 9, 2026)
+*** TODO Purpose, Method, Results (Due: Monday, March 9, 2026)
+** TODO Assignments & Quizzes
+*** TODO Participation for Axon as electrical circuits
+*** TODO Preliminary work
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, March 22, 2026)
+
+* TODO Lab: Balmer Series and Rydberg constant
+** TODO Session Tasks
+*** TODO 10th session Title, Objective, Equipment
+*** TODO Purpose, Method, Results
+** TODO Assignments & Quizzes
+*** TODO Participation to Balmer Series
+*** TODO Preliminary work (khpcontent.com)
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, March 29, 2026)
+
+* TODO Lab: Exponential growth and decay
+** TODO Session Tasks
+*** TODO 11th session Title, Objective, Equipment
+*** TODO Purpose, Method, Results
+** TODO Assignments & Quizzes
+*** TODO Participation for Exponential growth/decay
+*** TODO Preliminary work
+*** TODO Pre-lab and Post-lab quizzes
+*** TODO Submit Lab Report (Due: Sunday, April 5, 2026)
+
+* TODO Final Project
+** TODO Planning & Requirements
+*** TODO Choose topic (not from this semester unless procedure is changed)
+*** TODO Check equipment with TAs
+*** TODO Ensure experiment includes a graph with a slope parameter
+** TODO Deliverables
+*** TODO Face-to-face presentation (Due: Monday, April 27, 2026, 1:00 PM)
+*** TODO Submit Project Video Link (Due: Monday, May 4, 2026)
+** TODO Video Grading Criteria
+*** TODO Appealing/interesting aspect (5 pts)
+*** TODO Originality (5 pts)
+*** TODO Appropriateness for full lab (5 pts)
+*** TODO Participation (5 pts)
+*** TODO Readiness (5 pts)
+*** TODO Clarity/neatness (5 pts)
+*** TODO Length (5-10 minutes) (5 pts)
+*** TODO Thoroughness per lab report requirements (5 pts)
