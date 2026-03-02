@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+% Basic packages
+\usepackage[utf8]{inputenc}   % UTF-8 encoding
+\usepackage{geometry}          % Page margins
+\usepackage{setspace}          % Double spacing
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx}         % Include images
+\usepackage{booktabs}         % Nice tables
+\usepackage{enumitem}         % Custom lists
+\usepackage{cancel}
+\usepackage{float}
+
+% Page setup: 1-inch margins
+\geometry{
+  letterpaper,
+  margin=1in
+}
+
+% Double spacing
+\doublespacing{}
+
+% START OF DOCUMENT %
+\begin{document}
+
+\begin{center}
+    {\textbf{Johnny A. Rojas \& Aiden Sitorus, George Nicacio, Jeremiah
+        Hasibuan, Matthew Miller}}\\
+    {\Large \textbf{A LAB REPORT ON KIRCHHOFF'S LAWS OR RULES}}
+\end{center}
+
+\section{Theory}
+Building upon our previous analysis—where a plumbing system was used as an
+analogy for electrical flow—this report evaluates the validity and application
+of Kirchhoff’s Rules in complex circuits that cannot be simplified through basic
+series or parallel configurations. Kirchhoff’s Rules provide the mathematical
+framework necessary to solve for unknown variables in multi-loop circuits
+through two fundamental principles:
+
+\subsection*{I. Kirchhoff’s Voltage Law (KVL)}
+
+KVL is a reflection of the Law of Conservation of Energy. It states that the
+algebraic sum of the potential differences (voltages) around any closed loop or
+``conductive path'' must equal zero. Much like a ``summation of forces'' in
+mechanical equilibrium, KVL ensures that the energy supplied by a source is
+exactly accounted for by the potential drops across the loads.
+
+Mathematically, this is expressed as:
+\begin{equation*}
+  \sum_{k=1}^{n} V_k = 0
+\end{equation*}
+where:
+\begin{itemize}
+  \item $n$ represents the total number of electrical components encountered
+        along a specific closed path.
+  \item $k$ serves as the index for each individual element, effectively
+        ``counting'' our progress as we traverse the loop.
+  \item $V_k$ is the potential difference (measured in Volts) across the $k^{th}$
+        element; by convention, a voltage source (battery) represents a positive
+        gain, while a resistor represents a negative drop.
+\end{itemize}
+
+\subsection*{II.\@ Kirchhoff’s Current Law (KCL)}
+
+KCL is a reflection of the Law of Conservation of Charge. It dictates that
+charge cannot ``pile up'' or vanish at a junction (node). While our previous
+analogy compared current to water pressure, KCL specifically describes the flow:
+the total current entering a junction must exactly equal the total current
+exiting it.
+
+At any junction, the sum of currents is zero:
+\begin{equation*}
+    I_{in} = I_{out_1} + I_{out_2} + \cdots + I_{out_n}
+  \end{equation*}
+where:
+\begin{itemize}
+  \item $I$ represents the electric current, measured in Amperes ($A$).
+  \item $n$ represents the number of outgoing branches from the junction.
+\end{itemize}
+
+To test the efficacy of these models, our team analyzed two circuits of varying
+complexity. This study serves to validate the accuracy of Kirchhoff’s Rules and
+to exercise advanced circuit analysis techniques, providing a foundation for the
+study of more sophisticated electrical systems.
+
+\section{Conclusion}
+\subsection*{Activity 1: First Circuit}
+In Activity 1 our team used multimeters to measure the experimental currents and
+voltage drops across three resistors ($2220$ $\Omega$, $1494$ $\Omega$,
+and $820$ $\Omega$) and compared them to theoretical values derived from a
+system of linear equations. Our measurements yielded mixed results; for
+the $2220$ $\Omega$ and $1494$ $\Omega$ resistors,the measured currents
+of $0.0016$ A and $0.0012$ exhibited percent errors of $12.57\%$ and $7.460\%$
+from the expected values of $0.0018$ A and $0.0013$A, respectively.
+The $820$ $\Omega$ resistor presented a significant anomaly, with a measured
+voltage drop of $1.48$ V deviating from the expected $0.4373$ V by $238.4\%$.
+These discrepancies, particularly the extreme error in the third resistor,
+suggest that while the circuit followed a recognizable pattern, the results were
+heavily impacted by systematic errors such as internal meter resistance or
+contact issues in the breadboard assembly.
+
+\subsection*{Activity 2: Second Circuit}
+For Activity 2, our team calculated the expected theoretical currents across
+each node. The experimental data demonstrated varying levels of precision; we
+observed relatively accurate current measurements for the $2220$ $\Omega$
+and $1800$ $\Omega$ resistors, recording values of $0.00003070$ A and $0.0008$
+A, which yielded low percent errors of $0.1478\%$ and $1.113\%$ compared to
+theoretical calculations. Conversely, readings for
+the $820$ $\Omega$, $1494$ $\Omega$, and $1200$ $\Omega$ resistors deviated more
+significantly, with current errors of $58.37\%$, $27.28\%$, and $23.83\%$
+respectively. Despite these fluctuations, the general pattern of the data
+broadly aligns with the theoretical framework of Kirchhoff's rules. The larger
+discrepancies are likely attributable to procedural and systematic inaccuracies
+during data collection—such as inconsistent probe contact or minor assembly
+errors—rather than a flaw in the underlying physical laws.
+
+\section{Questions}
+\subsection*{Activity 1 Questions}
+\begin{enumerate}
+  \item \textbf{Compare your results in step \#2 and \#3. Discuss.} \\
+        After analyzing and comparing our results to the analog model introduced
+        in the previous laboratory session, we observed that the values at each
+        node are influenced by preceding circuit elements. This supports the
+        conclusion that current flows in a ``river-like'' pattern; however, it
+        is important to note that this macro-scale pattern does not necessarily
+        reflect electron behavior at the microscopic level. Instead, distinct
+        physical mechanisms govern charge transport to allow this observed
+        behavior to occur.
+\end{enumerate}
+
+\section{Above and Beyond}
+While these labs have allowed us to experience firsthand how to understand the
+changes in voltage and current across a circuit, it was not until we commenced
+research for this report that we discovered that the flow of energy across wires
+has less to do with the actual physical displacement of electrons and more to do
+with the electric fields they produce. It is fascinating how these mechanisms
+produce this predictable behavior at the macroscopic level. However, further
+research also provided insight into the limitations that occur in extreme
+cases—such as why certain wires require specific insulation for protection or
+the challenges of long-distance intercommunication. While the majority of
+circuit analysis applications can be successfully modeled using Kirchhoff's
+rules, advanced applications where accuracy and timing are fundamental require
+us to extend our models to account for these underlying physical complexities.
+
+\end{document}
