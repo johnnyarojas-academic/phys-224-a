@@ -29,11 +29,99 @@
 \end{center}
 
 \section{Theory}
-\section{Conclusion}
-\section{Question}
-\section{Above and Beyond}
 
+An electrical circuit consisting of a resistor and a capacitor---commonly 
+referred to as an RC circuit---exhibits a fundamentally different behavior 
+from a purely resistive circuit. At the heart of this difference is the 
+capacitor's ability to store charge on its plates. For a capacitor subjected 
+to an electric potential difference $V$, the relationship between the stored 
+charge $Q$ and the voltage is given by:
 
-\subsection*{I. Kirchhoff’s Voltage Law (KVL)}
+\begin{align*}
+    Q = CV
+\end{align*}
+
+\noindent where $C$ is the capacitance, a property of the capacitor that 
+quantifies how much charge it can store per unit voltage. What makes RC 
+circuits particularly interesting is not just the fact that charge accumulates, 
+but \textit{how} it accumulates over time.
+
+When a switch is closed and the capacitor begins to charge, the rate at which 
+charge builds up on the plates is not constant---it slows down as the voltage 
+across the capacitor approaches that of the power supply. This behavior is 
+characteristic of an exponential function, a special class of function whose 
+rate of change is proportional to its current value. In other words, the more 
+charge the capacitor has already accumulated, the slower it continues to 
+charge. This same logic applies in reverse during discharging: the more charge 
+remains, the faster it leaves, and the process slows as the plates approach 
+neutrality.
+
+To see where this exponential form comes from, we can apply Kirchhoff's 
+voltage law to the RC circuit during charging. The voltage supplied by the 
+source $\mathcal{E}$ must equal the sum of the voltage drops across the 
+resistor and the capacitor:
+
+\begin{align*}
+    \mathcal{E} = V_R + V_C = IR + \frac{Q}{C}
+\end{align*}
+
+\noindent Since the current is the rate of change of charge, $I = dQ/dt$, 
+we can substitute directly into the equation above to obtain the following 
+first-order differential equation:
+
+\begin{align*}
+    \mathcal{E} = R\frac{dQ}{dt} + \frac{Q}{C}
+\end{align*}
+
+\noindent Rearranging to isolate the derivative:
+
+\begin{align*}
+    \frac{dQ}{dt} = \frac{\mathcal{E}}{R} - \frac{Q}{RC}
+\end{align*}
+
+\noindent This equation tells us that the rate at which charge accumulates 
+on the capacitor decreases as $Q$ grows---precisely the behavior we 
+described as exponential. Solving this differential equation with the 
+initial condition $Q(0) = 0$, and converting back to voltage using 
+$V_C = Q/C$, yields the solution for the voltage across the capacitor 
+during charging:
+
+\begin{align*}
+    V_C(t) = \mathcal{E}\left(1 - e^{-t/\tau}\right)
+\end{align*}
+
+\noindent and during discharging from an initial voltage $V_0$:
+
+\begin{align*}
+    V_C(t) = V_0\, e^{-t/\tau}
+\end{align*}
+
+\noindent In both expressions, $\tau$ is the \textbf{RC time constant}, 
+defined as:
+
+\begin{align*}
+    \tau = RC
+\end{align*}
+
+\noindent The time constant $\tau$ carries units of seconds and has a concrete 
+physical meaning: it is the time it takes for the capacitor to charge to 
+approximately $63.2\%$ of the supply voltage, or to discharge to approximately 
+$36.8\%$ of its initial voltage---values that follow directly from evaluating 
+$e^{-1}$.
+
+The goal of this experiment is to verify this theoretical prediction 
+experimentally using an RC circuit built on a breadboard with a known 
+resistance $R = 3{,}300\ \Omega$ and capacitance $C = 470\ \mu\text{F}$, 
+giving a theoretical time constant of:
+
+\begin{align*}
+    \tau_{\text{theory}} = RC = (3{,}300)(470 \times 10^{-6}) \approx 1.551\ 
+    \text{s}
+\end{align*}
+
+\noindent Rather than measuring charge or current directly, we record the 
+voltage across the capacitor over time using the PASCO 850 interface and 
+voltage sensor, as voltage is the most directly accessible quantity given our 
+available instrumentation.
 
 \end{document}
