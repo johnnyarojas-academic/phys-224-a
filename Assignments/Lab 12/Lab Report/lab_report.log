@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/nixos.org) (preloaded format=pdflatex 1980.1.1)  8 MAR 2026 18:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/nixos.org) (preloaded format=pdflatex 1980.1.1)  8 MAR 2026 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,20 +329,50 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [2]
 
-[3] (./lab_report.aux)
+[3]
+
+[4]
+<tables/table_1.png, id=24, 866.23625pt x 521.95pt>
+File: tables/table_1.png Graphic file (type png)
+<use tables/table_1.png>
+Package pdftex.def Info: tables/table_1.png  used on input line 215.
+(pdftex.def)             Requested size: 469.75502pt x 283.0514pt.
+
+
+[5]
+<tables/table_2.png, id=29, 866.23625pt x 521.95pt>
+File: tables/table_2.png Graphic file (type png)
+<use tables/table_2.png>
+Package pdftex.def Info: tables/table_2.png  used on input line 222.
+(pdftex.def)             Requested size: 469.75502pt x 283.0514pt.
+
+
+[6 <./tables/table_1.png>]
+Overfull \hbox (6.91595pt too wide) in paragraph at lines 237--252
+\OT1/cmr/m/n/12 cen-turies. When neg-a-tive num-bers were first in-tro-duced, t
+hey were met with deep skepticism---
+ []
+
+
+
+[7 <./tables/table_2.png>]
+
+[8]
+
+[9] (./lab_report.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3674 strings out of 467888
- 59113 string characters out of 5405403
- 459842 words of memory out of 5000000
- 32196 multiletter control sequences out of 15000+600000
- 632730 words of font info for 62 fonts, out of 8000000 for 9000
+ 3704 strings out of 467888
+ 59809 string characters out of 5405403
+ 461842 words of memory out of 5000000
+ 32226 multiletter control sequences out of 15000+600000
+ 633335 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,11n,65p,252b,160s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,252b,241s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </nix/store/h03408lmim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250
 703-texmfdist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></nix/store/h03408lmim0
 far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/fonts/type1
@@ -359,10 +389,10 @@ mim0far29q4dddmwvar4g6mgj-texlive-combined-full-2025.20250703-texmfdist/fonts/t
 ype1/public/amsfonts/cm/cmsy8.pfb></nix/store/h03408lmim0far29q4dddmwvar4g6mgj-
 texlive-combined-full-2025.20250703-texmfdist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb>
-Output written on lab_report.pdf (3 pages, 102398 bytes).
+Output written on lab_report.pdf (9 pages, 169117 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
- 35 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

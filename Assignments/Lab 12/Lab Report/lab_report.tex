@@ -124,4 +124,160 @@ voltage across the capacitor over time using the PASCO 850 interface and
 voltage sensor, as voltage is the most directly accessible quantity given our 
 available instrumentation.
 
+\section*{Conclusion}
+
+\subsection*{Activity 1: Charging a Capacitor}
+
+To evaluate the charging behavior of the capacitor, the voltage data
+collected from the PASCO sensor was fitted to an exponential trendline
+in Excel. Since the charging equation takes the form
+$V_C(t) = \mathcal{E}(1 - e^{-t/\tau})$, the coefficient $-1/RC$ was
+used as the key quantity to compare between theory and experiment, as
+it can be extracted directly from the exponential trendline fit. The
+theoretical and experimental values are summarized below:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Quantity} & \textbf{Theoretical} & \textbf{Experimental} \\
+\midrule
+$-1/RC$ (s$^{-1}$) & $-0.644745$ & $-0.514350$ \\
+Percent Error       & \multicolumn{2}{c}{$20.22\%$} \\
+$R^2$               & \multicolumn{2}{c}{$0.99829$} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The $R^2$ value of $0.99829$ and a percent error of $20.22\%$, well
+within our acceptable threshold of $25\%$, confirm that the theoretical
+model successfully predicts the exponential charging behavior of the
+capacitor. The voltage across the capacitor rises in a manner consistent
+with the form prescribed by theory, validating the RC model for this
+activity.
+
+\subsection*{Activity 2: Discharging a Capacitor}
+
+For the discharging phase, the capacitor was allowed to charge fully
+before the power supply was switched off, and the subsequent voltage
+decay was recorded and fitted in the same manner. The discharge follows
+$V_C(t) = V_0\, e^{-t/\tau}$, and the results are summarized below:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Quantity} & \textbf{Theoretical} & \textbf{Experimental} \\
+\midrule
+$-1/RC$ (s$^{-1}$) & $-0.644745$ & $-0.564400$ \\
+Percent Error       & \multicolumn{2}{c}{$14.23\%$} \\
+$R^2$               & \multicolumn{2}{c}{$0.99974$} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The $R^2$ value of $0.99974$ and a percent error of $14.23\%$ confirm
+once again that the theoretical model successfully predicts the
+exponential discharging behavior of the capacitor. The voltage decays
+in a manner fully consistent with the theoretical form, further
+validating the RC model for this activity.
+
+\subsection*{Overall Conclusion}
+
+Across both activities, the RC model proves to be a reliable predictor
+of the voltage behavior of a capacitor, with both percent errors
+falling well within the $25\%$ acceptable threshold and $R^2$ values
+approaching unity. However, a notable observation emerges when comparing
+the two experimentally obtained values of $-1/RC$: the charging activity
+yielded $-0.514350$ s$^{-1}$, while the discharging activity yielded
+$-0.564400$ s$^{-1}$. These two values are not equal, despite the fact
+that the same physical components were used in both cases. This
+discrepancy points to a real limitation of the setup---during charging,
+the PASCO 850 power supply is active in the circuit and its internal
+resistance adds to the total resistance experienced by the capacitor,
+effectively slowing the charging rate and pushing the experimental
+$-1/RC$ further from the theoretical value. During discharging, the
+power supply is disconnected, and so its internal resistance no longer
+participates, allowing the capacitor to discharge more closely to the
+ideal prediction.
+
+To address this limitation in future experiments, we propose computing
+the theoretical $RC$ using the actual voltage the capacitor experiences
+at the onset of each phase, rather than relying on the nominal component
+values alone. This approach would decouple the charging and discharging
+dynamics from the influence of the power supply, producing a theoretical
+prediction that is tailored to each activity independently and therefore
+more physically meaningful.
+
+\section*{Questions}
+
+\subsection*{Activity 1: Graphs}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{tables/table_1}
+  \caption{Voltage vs. Time for the Charging of the Capacitor (Activity 1)}
+\end{figure}
+
+\subsection*{Activity 2: Graphs}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{tables/table_2}
+  \caption{Voltage vs. Time for the Discharging of the Capacitor (Activity 2)}
+\end{figure}
+
+\section*{Above and Beyond}
+
+One of the most quietly profound observations of this experiment is not
+found in the data itself, but in the tool we used to describe it. The
+exponential function, a construct born purely from the rules of calculus
+and the study of self-referential rates of change, turns out to describe
+with remarkable precision the physical behavior of electrons accumulating
+on a capacitor plate. This is not obvious. There is no immediate reason
+why the abstract solution to a differential equation should map so cleanly
+onto the behavior of a circuit sitting on a breadboard. And yet it does.
+
+This alignment between mathematics and physical reality has puzzled
+philosophers for centuries. When negative numbers were first introduced,
+they were met with deep skepticism---the idea of a quantity less than
+nothing seemed to have no grounding in the real world, a purely
+symbolic trick with no physical referent. Imaginary numbers faced an
+even steeper resistance: Gerolamo Cardano, who first made use of them
+in the 16th century, described them as ``fictitious'' and ``useless.''
+And yet imaginary numbers today are indispensable in the very field this
+experiment touches---AC circuit analysis, quantum mechanics, and signal
+processing all rest on a foundation built from $\sqrt{-1}$. Linear
+algebra, once regarded as an abstract exercise in manipulating arrays of
+numbers, became the backbone of computer graphics, machine learning, and
+search algorithms. In each case, the mathematics preceded the application
+by decades or centuries, waiting quietly until the physical world caught
+up and revealed where it had been hiding all along.
+
+The physicist Eugene Wigner famously called this phenomenon ``the
+unreasonable effectiveness of mathematics''---the strange and
+unexplained fact that mathematical structures developed with no applied
+purpose in mind consistently turn out to describe nature with
+extraordinary precision. It raises a question that remains genuinely
+open: is mathematics discovered or invented? Are we uncovering a
+structure that was always embedded in the universe, or are we
+building a language so flexible that it inevitably finds a way to fit
+whatever we point it at?
+
+What mathematical abstractions are still waiting for their physical
+moment? Topology, the study of properties preserved under continuous
+deformation, was considered almost entirely theoretical until it found
+a home in the classification of phases of matter, earning the 2016
+Nobel Prize in Physics. Quaternions, a generalization of complex numbers
+invented by William Hamilton in 1843, were largely abandoned by
+physicists for over a century before re-emerging as the preferred tool
+for describing rotations in three-dimensional space---now used in every
+modern video game engine and spacecraft orientation system. Number
+theory, long considered the purest and most application-free branch of
+mathematics, became the foundation of modern cryptography and internet
+security.
+
+This experiment and its simple exponential function serve as a reminder that the
+world and the technology around us are built on these mathematical foundations.
+From the circuits in our devices to the signals they transmit, abstract
+mathematics quietly underpins the physical reality we interact with every day.
+It leaves us to wonder what other connections between nature and mathematics are
+still waiting to be realized.
+
 \end{document}
