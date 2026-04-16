@@ -1,0 +1,133 @@
+\documentclass[12pt]{article}
+% Basic packages
+\usepackage[utf8]{inputenc}   % UTF-8 encoding
+\usepackage{geometry}          % Page margins
+\usepackage{setspace}          % Double spacing
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx}         % Include images
+\usepackage{booktabs}         % Nice tables
+\usepackage{enumitem}         % Custom lists
+\usepackage{cancel}
+\usepackage{float}
+
+% Page setup: 1-inch margins
+\geometry{
+  letterpaper,
+  margin=1in
+}
+
+% Double spacing
+\doublespacing{}
+
+% START OF DOCUMENT %
+\begin{document}
+
+\begin{center}
+    {\textbf{Johnny A. Rojas \& Aiden Sitorus, George Nicacio, Jeremiah
+        Hasibuan, Matthew Miller}}\\
+    {\Large \textbf{A LAB REPORT ON THE AXON MODEL, A BIOPHYSICS LABORATORY}}
+\end{center}
+
+\section{Theory}
+
+\subsection{The Capacitor and Its Role in the Axon}
+
+A capacitor is a circuit element that stores energy in the form of an electric field between two conducting plates separated by an insulating material (a dielectric). The capacitance of a parallel-plate capacitor is given by
+
+\begin{align*}
+    C = \frac{\varepsilon A}{d}
+\end{align*}
+
+\noindent where:
+\begin{itemize}
+    \item $C$ is the capacitance (in Farads, F),
+    \item $\varepsilon$ is the permittivity of the dielectric material between the plates (in F/m),
+    \item $A$ is the overlapping area of the plates (in m$^2$),
+    \item $d$ is the distance between the plates (in m).
+\end{itemize}
+
+From this expression we can extract two intuitive relationships: capacitance grows when the plate area increases, and shrinks when the plates are pulled farther apart. A useful way to picture this is to imagine two large sheets of aluminum foil separated by a thin layer of plastic wrap, which is precisely the construction we will use in Activity 1. Pressing the sheets together (reducing $d$) increases the capacitance; pulling them apart decreases it. The same physics explains why a pinch on your skin hurts. When tissue is compressed, the effective plate separation of the nerve membrane decreases, the local capacitance rises, and because the stored charge satisfies $Q = CV$, a larger capacitance at the same membrane voltage means a larger charge displacement, producing a stronger electrical signal that the brain interprets as pain.
+
+When capacitors are connected in parallel, the equivalent capacitance is simply the sum of the individual capacitances:
+
+\begin{align*}
+    C_{\text{eq, parallel}} = C_1 + C_2 + \cdots + C_n
+\end{align*}
+
+\noindent This is because placing capacitors in parallel effectively increases the total plate area available to store charge. In contrast, capacitors connected in series yield a smaller equivalent capacitance:
+
+\begin{align*}
+    \frac{1}{C_{\text{eq, series}}} = \frac{1}{C_1} + \frac{1}{C_2} + \cdots + \frac{1}{C_n}
+\end{align*}
+
+\noindent The series result is equivalent to increasing the effective distance between the outermost plates, which reduces $C$. This distinction is directly relevant to understanding myelinated versus unmyelinated axons: the myelin sheath wraps around the axon membrane in multiple layers, stacking insulating dielectric layers in series. Each additional layer drives the equivalent capacitance down. Unmyelinated axons lack this wrapping, so their single-layer membrane presents a comparatively large capacitance. A lower capacitance means the membrane charges and discharges more quickly, which is one reason myelinated axons can transmit signals faster.
+
+\subsection{Resistance in Circuits and in the Axon}
+
+Ohm's law relates the voltage $V$ across a resistor to the current $I$ flowing through it:
+
+\begin{align*}
+    V = IR
+\end{align*}
+
+\noindent where $R$ is the resistance (in Ohms, $\Omega$). Resistors combine according to rules that are, in a sense, the mirror image of capacitor rules. For resistors in series:
+
+\begin{align*}
+    R_{\text{eq, series}} = R_1 + R_2 + \cdots + R_n
+\end{align*}
+
+\noindent and for resistors in parallel:
+
+\begin{align*}
+    \frac{1}{R_{\text{eq, parallel}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}
+\end{align*}
+
+\noindent An axon is not a simple wire; it is a cylinder of intracellular fluid (cytosol) surrounded by a membrane that separates it from extracellular fluid. A current traveling down the axon encounters resistance along the cytosol, and this is the intracellular or axial resistance, $R_{\text{long}}$. At every point along its length, some current also leaks outward through the membrane; the membrane opposes this leakage with its own membrane resistance, $R_{\text{across}}$.
+
+\subsection{The Hodgkin Huxley Model}
+
+In 1952, Alan Hodgkin and Andrew Huxley published a model describing the electrical behavior of the squid giant axon. Their work, showed that the axon membrane can be modeled as a network of resistors and capacitors arranged in a repeating ladder structure. Each rung of the ladder represents a thin slice of the axon and contains a resistor $R_{\text{long}}$ (typically 400 $\Omega$ in our model) connecting one slice to the next, representing the axial resistance of the intracellular fluid, and a resistor $R_{\text{across}}$ (1.5 k$\Omega$ or 1.0 k$\Omega$ in our model) connecting the intracellular side to the extracellular side, representing the membrane resistance.
+
+In the simplified version we build in Activity 2, we omit the capacitive behavior of the membrane entirely and focus on how current divides between the axial and membrane paths. In doing so we isolate a single variable, resistance, and study how adding more rungs to the ladder changes the equivalent resistance and the distribution of current. An important observation is that the current through any single membrane resistor changes when neighboring rungs are added or removed, because adding parallel paths redistributes how voltage is shared across the network. This is consistent with Kirchhoff's junction rule: the total current entering a node must equal the total current leaving it, so opening a new path necessarily redirects some current away from existing ones.
+
+\subsection{The Cable Model and Signal Propagation}
+
+The third and most complete model restores the capacitive element to each rung, placing a capacitor $C$ in parallel with each membrane resistor $R_{\text{across}}$. This RC combination captures the fact that the membrane both leaks current (through $R_{\text{across}}$) and stores charge (through $C$), just as a real axon membrane does. The result is a circuit known as the cable model.
+
+When a constant (DC) voltage $\mathcal{E}$ is applied at one end of this ladder network, the steady-state voltage at the $n$-th rung decays exponentially with distance:
+
+\begin{align*}
+    V(n) = \mathcal{E}\, e^{-n\,L/\lambda}
+\end{align*}
+
+\noindent where:
+\begin{itemize}
+    \item $n$ is the rung number ($n = 1, 2, 3, \ldots$),
+    \item $L$ is the physical length of one slice (the length of each 400 $\Omega$ resistor),
+    \item $\lambda$ is the length constant, defined by
+\end{itemize}
+
+\begin{align*}
+    \frac{\lambda}{L} = \sqrt{\frac{R_{\text{across}}}{R_{\text{long}}}}
+\end{align*}
+
+\noindent The length constant $\lambda$ tells us how far a signal can travel before it decays to about 37\% of its original amplitude ($1/e \approx 0.368$). A large $\lambda$ means the signal reaches farther; a small $\lambda$ means rapid attenuation. Intuitively, if the membrane resistance $R_{\text{across}}$ is large (the membrane is tight and does not leak much), the signal preserves its strength over a longer distance. If the axial resistance $R_{\text{long}}$ is large (the cytosol is hard to push current through), the signal weakens faster.
+
+The speed at which the signal propagates along the axon is given by
+
+\begin{align*}
+    v = \frac{\lambda}{\tau}
+\end{align*}
+
+\noindent where $\tau = R_{\text{across}} \cdot C$ is the time constant of the membrane RC circuit. The time constant describes how quickly the membrane charges: a small $\tau$ means rapid charging and therefore faster propagation. This is the final quantity we will determine experimentally in Activity 3.
+
+\subsection{Methodology and Circuit Construction}
+
+Our laboratory is structured around three progressively more complex circuits, each isolating a different aspect of axon physics:
+
+Activity 1 addresses capacitance in isolation. We construct a physical capacitor from aluminum foil plates separated by plastic wrap, directly mirroring the capacitance equation. By rolling the assembly into a cylinder, reminiscent of an axon's geometry, we obtain a measurable capacitance. We then compress the capacitor to decrease $d$ and observe the resulting increase in $C$. This activity grounds the abstract equation in a tangible, hands-on experience and connects it to the biological phenomenon of pain sensitivity under mechanical pressure.
+
+Activity 2 shifts focus to resistance. Using carbon resistors on a breadboard, we construct the ladder network described by the Hodgkin Huxley model with horizontal resistors ($R_{\text{long}} = 400$ $\Omega$) in series along the axon axis and vertical resistors ($R_{\text{across}} = 1.5$ k$\Omega$ or 1.0 k$\Omega$) bridging to the extracellular side. We measure the equivalent resistance of circuits with different numbers of rungs, verify current distributions against Kirchhoff's laws, and examine how the ratio of voltage drops across consecutive rungs relates to the resistance values. By deliberately omitting capacitors, we cleanly isolate the resistive behavior and build intuition for how current is shared between the axial and membrane pathways.
+
+Activity 3 combines both elements into the full cable model. We add polarized capacitors (either 470 $\mu$F or 47 $\mu$F) in parallel with each membrane resistor, building a five-rung ladder network. Using the PASCO 850 interface, we apply a DC voltage and record the transient voltage response at each rung as a function of time. From these measurements we extract the experimental voltage decay profile $V(n)$, fit it to the exponential form of the cable equation to determine $\mathcal{E}$ and $\lambda$, and finally compute the signal propagation speed. This activity brings together all the theory developed in the previous two activities into a single measurement that characterizes the axon model as a whole.
+\end{document}
