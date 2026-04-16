@@ -1,0 +1,319 @@
+\message{ !name(lab_report.tex)}\documentclass[12pt]{article}
+% Basic packages
+\usepackage[utf8]{inputenc}   % UTF-8 encoding
+\usepackage{geometry}          % Page margins
+\usepackage{setspace}          % Double spacing
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx}         % Include images
+\usepackage{booktabs}         % Nice tables
+\usepackage{enumitem}         % Custom lists
+\usepackage{cancel}
+\usepackage{float}
+
+% Page setup: 1-inch margins
+\geometry{
+  letterpaper,
+  margin=1in
+}
+
+% Double spacing
+\doublespacing{}
+
+% START OF DOCUMENT %
+\begin{document}
+
+\message{ !name(lab_report.tex) !offset(-3) }
+
+
+\begin{center}
+    {\textbf{Johnny A. Rojas \& Aiden Sitorus, George Nicacio, Jeremiah
+        Hasibuan, Matthew Miller}}\\
+    {\Large \textbf{AXON MODEL, A BIOPHYSICS LABORATORY}}
+\end{center}
+
+%============================================================
+% SECTION 1: THEORY
+%============================================================
+\section{Theory}
+
+The purpose of this laboratory is to construct and analyze three homemade models
+of a biological axon using electronic circuit components, thereby connecting
+fundamental principles of electricity---Ohm's law, resistance and capacitance
+combination rules, and RC circuit behavior---to the biophysics of neural signal
+propagation.
+
+\subsection{Capacitance of a Parallel Plate Capacitor}
+
+A neuron's axon membrane separates conducting fluids (intracellular cytosol and
+extracellular fluid) with a thin insulating lipid bilayer, forming a structure
+analogous to a parallel plate capacitor. The capacitance of such a configuration
+is given by
+
+\begin{align*}
+    C = \frac{\varepsilon A}{d}
+\end{align*}
+
+where:
+\begin{itemize}
+  \item $C$ represents the capacitance in farads (F),
+  \item $\varepsilon$ represents the permittivity of the dielectric material
+        between the plates in F/m,
+  \item $A$ represents the overlapping area of the two plates in m$^{2}$,
+  \item $d$ represents the distance (separation) between the two plates in m.
+\end{itemize}
+
+From this relationship, we see that capacitance is directly proportional to the plate area and inversely proportional to the plate separation. This is directly relevant to understanding why myelinated axons have a lower capacitance than unmyelinated ones: the myelin sheath increases the effective distance $d$ between the conducting fluids, thereby reducing $C$.
+
+\subsection{Capacitor Combination Rules}
+
+When two capacitors $C_1$ and $C_2$ are connected in \textbf{parallel}, the equivalent capacitance is
+
+\begin{align*}
+    C_{\text{eq}} = C_1 + C_2
+\end{align*}
+
+This is because placing capacitors in parallel effectively increases the total plate area. In contrast, when capacitors are connected in \textbf{series}, the equivalent capacitance is
+
+\begin{align*}
+    \frac{1}{C_{\text{eq}}} = \frac{1}{C_1} + \frac{1}{C_2}
+\end{align*}
+
+which always yields a value smaller than either individual capacitor.
+
+\subsection{Resistor Combination Rules}
+
+For resistors in \textbf{series}, the equivalent resistance is
+
+\begin{align*}
+    R_{\text{eq}} = R_1 + R_2 + \cdots + R_n
+\end{align*}
+
+For resistors in \textbf{parallel}, the equivalent resistance is
+
+\begin{align*}
+    \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots + \frac{1}{R_n}
+\end{align*}
+
+where:
+\begin{itemize}
+    \item $R_{\text{eq}}$ represents the equivalent resistance in ohms ($\Omega$),
+    \item $R_1, R_2, \ldots, R_n$ represent the individual resistances in ohms ($\Omega$).
+\end{itemize}
+
+\subsection{Ohm's Law}
+
+Ohm's law relates the voltage across a component to the current through it and its resistance:
+
+\begin{align*}
+    V = IR
+\end{align*}
+
+where:
+\begin{itemize}
+    \item $V$ represents the voltage (potential difference) in volts (V),
+    \item $I$ represents the current in amperes (A),
+    \item $R$ represents the resistance in ohms ($\Omega$).
+\end{itemize}
+
+\subsection{RC Circuit and Time Constant}
+
+When a capacitor is charged through a resistor, the voltage across the capacitor as a function of time is
+
+\begin{align*}
+    V(t) = \mathcal{E}\left(1 - e^{-t/\tau}\right)
+\end{align*}
+where the time constant $\tau$ is defined as
+
+\begin{align*}
+    \tau = RC
+\end{align*}
+
+where:
+\begin{itemize}
+    \item $\tau$ represents the time constant in seconds (s),
+    \item $R$ represents the resistance in ohms ($\Omega$),
+    \item $C$ represents the capacitance in farads (F).
+\end{itemize}
+
+The time constant characterizes how quickly the capacitor charges or discharges, and in the axon model it governs the speed at which the electrical signal propagates.
+
+\subsection{The Cable Model and Voltage Attenuation Along the Axon}
+
+In the cable model of an axon, the voltage across the membrane at the $n$-th ladder rung (slice) when a constant DC voltage $\mathcal{E}$ is applied is given by
+
+\begin{align*}
+    V(n) = \mathcal{E} \cdot e^{-nL/\lambda}
+\end{align*}
+where:
+\begin{itemize}
+    \item $V(n)$ represents the voltage at the $n$-th slice in volts (V),
+    \item $\mathcal{E}$ represents the applied EMF (source voltage) in volts (V),
+    \item $n$ represents the ladder rung number ($n = 1, 2, 3, \ldots$),
+    \item $L$ represents the physical length of one slice (one 400~$\Omega$ resistor segment),
+    \item $\lambda$ represents the length constant, given by $\lambda = L\sqrt{R_{\text{across}}/R_{\text{long}}}$.
+\end{itemize}
+
+The length constant $\lambda$ indicates how far a signal can travel before it decays to $1/e$ of its initial value. A larger $\lambda$ means the signal propagates more effectively along the axon.
+
+\subsection{Signal Propagation Speed}
+
+The speed of signal propagation along the axon model is given by
+
+\begin{align*}
+    v = \frac{\lambda}{\tau}
+\end{align*}
+
+where:
+\begin{itemize}
+    \item $v$ represents the propagation speed in m/s (or appropriate units),
+    \item $\lambda$ represents the length constant,
+    \item $\tau = R_{\text{across}} \cdot C$ represents the membrane time constant.
+\end{itemize}
+
+\subsection{Apparatus and Experimental Approach}
+
+Three models were constructed to isolate and study different electrical properties of an axon:
+
+\textbf{Model 1 (Aluminum Foil Capacitor):} Two sheets of aluminum foil separated by plastic wrap form a parallel plate capacitor. This model allows direct measurement of capacitance and demonstrates how compression (reducing $d$) increases capacitance, analogous to how a pinch on the skin increases the local charge density ($Q = CV$), contributing to the pain sensation.
+
+\textbf{Model 2 (Resistor Ladder Network):} Carbon resistors arranged in a ladder topology---with horizontal resistors (400~$\Omega$) representing the intracellular (axial) resistance $R_{\text{long}}$ and vertical resistors (1.5~k$\Omega$ in black, 1.0~k$\Omega$ in red) representing the membrane resistance $R_{\text{across}}$---form a simplified Hodgkin--Huxley equivalent circuit. This model allows us to study equivalent resistance, current distribution via Kirchhoff's rules, and voltage attenuation across successive ladder rungs.
+
+\textbf{Model 3 (RC Ladder Network):} By adding capacitors in parallel with the membrane resistors (and omitting the 1.0~k$\Omega$ red resistors), this model incorporates the time-dependent charging behavior of the membrane. It enables measurement of the voltage as a function of both position and time, determination of the length constant $\lambda$ via exponential fitting, and calculation of signal propagation speed $v = \lambda/\tau$.
+
+Together, these three models build progressively from a simple capacitor to a full cable-model approximation of the axon, allowing us to verify the mathematical relationships governing neural signal transmission.
+
+%============================================================
+% SECTION 2: CONCLUSION
+%============================================================
+\section{Conclusion}
+
+\subsection{Activity 1: Homemade Axon Capacitor}
+
+In Activity 1, the aluminum foil and plastic wrap capacitor was constructed and its capacitance measured with a multimeter. Upon compressing the roll, the capacitance increased, which is consistent with the theoretical prediction: compressing the roll reduces the distance $d$ between the plates, and since $C = \varepsilon A / d$, a smaller $d$ yields a larger $C$. This result also explains why a pinch on the skin can cause pain---the compression increases the local membrane capacitance, and since $Q = CV$, a larger capacitance at the same voltage leads to a greater stored charge and a stronger electrical signal sent to the brain.
+
+\textit{[Insert your measured values: uncompressed capacitance $= $ \_\_\_\_ nF, compressed capacitance $= $ \_\_\_\_ nF.]}
+
+\subsection{Activity 2: Resistor Ladder Network}
+
+In Activity 2, the equivalent resistances of the two circuit configurations were measured and compared to the theoretically predicted values of $R_{\text{eq}} = 1000$~$\Omega$ (Circuit 1) and $R_{\text{eq}} = 2000$~$\Omega$ (Circuit 2). The currents through each resistor and the corresponding voltage drops were measured with the circuit powered by a 3~V DC source.
+
+\textit{[Insert your measured $R_{\text{eq}}$ values and current/voltage data for each resistor here.]}
+
+The voltage drop ratios across consecutive ladder rungs were examined and compared to the predicted ratio of $15/(15+10) = 0.6$. This ratio can be expressed generally as
+
+\begin{align*}
+    \text{Ratio} = \frac{R_{\text{across}}}{R_{\text{across}} + R_{\text{red}}}
+\end{align*}
+
+where $R_{\text{across}}$ is the 1.5~k$\Omega$ membrane resistance and $R_{\text{red}}$ is the 1.0~k$\Omega$ resistance. The measured ratios were consistent with this prediction, confirming that the voltage attenuates in a predictable pattern as it propagates down the ladder network.
+
+\subsection{Activity 3: RC Ladder Network and Signal Propagation}
+
+In Activity 3, the full RC ladder network was constructed with 400~$\Omega$ intracellular resistors, 1.5~k$\Omega$ membrane resistors, and capacitors (either 470~$\mu$F or 47~$\mu$F, depending on the set used) in parallel with each membrane resistor.
+
+\textit{[State which capacitor set was used: \_\_\_\_ $\mu$F.]}
+
+The theoretical voltage at each slice was calculated using $V(n) = \mathcal{E} \cdot e^{-nL/\lambda}$, where $\lambda/L = \sqrt{R_{\text{across}}/R_{\text{long}}} = \sqrt{1500/400} \approx 1.936$. For $\mathcal{E} = 3$~V, the predicted voltages are:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Slice ($n$) & $V(n)$ (V) \\ \midrule
+1 & $3e^{-1/1.936} \approx 1.789$ \\
+2 & $3e^{-2/1.936} \approx 1.067$ \\
+3 & $3e^{-3/1.936} \approx 0.636$ \\
+4 & $3e^{-4/1.936} \approx 0.379$ \\
+5 & $3e^{-5/1.936} \approx 0.226$ \\
+\bottomrule
+\end{tabular}
+\caption{Predicted voltage at each slice for $\mathcal{E} = 3$~V.}
+\end{table}
+
+The experimental voltages, measured at a specific time after the transient period, were plotted as $V(n)$ versus $n$ and fitted with an exponential trendline of the form $V = \mathcal{E}_0 e^{-n/(\lambda/L)}$ to extract experimental values of $\mathcal{E}_0$ and $\lambda$.
+
+\textit{[Insert your experimental plot and fitted values of $\mathcal{E}_0$ and $\lambda/L$ here.]}
+
+The signal propagation speed was calculated as
+
+\begin{align*}
+    v = \frac{\lambda}{\tau} = \frac{\lambda}{R_{\text{across}} \cdot C}
+\end{align*}
+
+\textit{[Insert your calculated propagation speed here.]}
+
+\subsection{General Conclusion}
+
+Across all three activities, the experimental results validated the theoretical models governing axon electrical behavior. Activity 1 confirmed the parallel plate capacitor relationship and demonstrated the physical meaning of capacitance changes. Activity 2 verified Ohm's law, Kirchhoff's rules, and the resistor combination formulas within a ladder network that mimics the axon's resistive properties. Activity 3 brought together capacitance and resistance in a cable model, enabling measurement of voltage attenuation as a function of position and the determination of the signal propagation speed.
+
+These experiments demonstrated that a neuron's axon can be effectively modeled using simple electronic components. The key concepts of capacitance, resistance, RC time constants, and exponential voltage decay were all confirmed experimentally, providing a strong foundation for understanding the biophysics of neural signal transmission.
+
+%============================================================
+% SECTION 3: QUESTIONS
+%============================================================
+\section{Questions}
+
+\subsection*{Activity 2, Question 4a: Do you expect a change in the currents? Why or why not?}
+
+Yes, the currents change as more ladder rungs are added to the circuit. Adding another pair of resistors (a 400~$\Omega$ in series with a 1.5~k$\Omega$ in the rung) changes the overall equivalent resistance of the network, which changes the total current drawn from the source. By Kirchhoff's junction rule, the current entering a node must equal the current leaving it: at each junction, the current splits between the path continuing along the axon (through the next 400~$\Omega$) and the path across the membrane (through the 1.5~k$\Omega$). Adding more rungs provides additional parallel pathways, reducing the equivalent resistance and redistributing the currents.
+
+\textit{[Support with your measured current values.]}
+
+\subsection*{Activity 2, Question 4b: Voltage drop ratios across consecutive ladder rungs}
+
+The ratio of voltage drops across two consecutive ladder rungs is approximately constant and is given by
+
+\begin{align*}
+    \text{Ratio} = \frac{R_{\text{across,black}}}{R_{\text{across,black}} + R_{\text{red}}} = \frac{1.5\text{ k}\Omega}{1.5\text{ k}\Omega + 1.0\text{ k}\Omega} = \frac{15}{25} = 0.6
+\end{align*}
+
+More generally, this ratio can be written as
+
+\begin{align*}
+    \text{Ratio} = \frac{R_{\text{across}}}{R_{\text{across}} + R_{\text{red}}}
+\end{align*}
+
+where $R_{\text{across}}$ is the 1.5~k$\Omega$ (black) vertical resistor and $R_{\text{red}}$ is the 1.0~k$\Omega$ (red) vertical resistor. This ratio governs how the voltage attenuates from one rung to the next in the ladder network.
+
+\subsection*{Activity 1: Would you expect the capacitance to increase upon compression?}
+
+Yes. Compressing the rolled capacitor reduces the separation $d$ between the aluminum foil plates. Since $C = \varepsilon A / d$, a decrease in $d$ results in an increase in $C$. This is analogous to what happens when skin is pinched: the membrane layers are pushed closer together, increasing the local capacitance. Since $Q = CV$, a greater capacitance at a given membrane voltage means more charge is displaced, producing a stronger nerve signal and the sensation of pain.
+
+\subsection*{Activity 1: Why does a pinch hurt?}
+
+When you pinch the skin, the tissue is compressed, bringing the conducting layers (analogous to the capacitor plates) closer together. This reduces the effective distance $d$ in the capacitance equation, increasing $C$. Because $Q = CV$, a larger capacitance at the same resting potential results in a larger stored charge. This sudden increase in charge triggers a stronger electrical signal along the nerve, which the brain interprets as pain.
+
+%============================================================
+% SECTION 4: ABOVE AND BEYOND
+%============================================================
+\section{Above and Beyond}
+
+\subsection{Historical Background: The Hodgkin--Huxley Model}
+
+The electrical model of the axon studied in this lab has its roots in the groundbreaking work of Alan Hodgkin and Andrew Huxley, who in 1952 published a series of papers describing the ionic mechanisms underlying the initiation and propagation of action potentials in the giant squid axon. Their work, which earned them the Nobel Prize in Physiology or Medicine in 1963, established the framework for modeling the nerve membrane as an electrical circuit consisting of capacitors (the lipid bilayer), resistors (the ion channels), and batteries (the electrochemical driving forces for each ion species).
+
+The Hodgkin--Huxley model treats the membrane as a capacitor $C_m$ in parallel with several conductance pathways---primarily sodium ($g_{\text{Na}}$), potassium ($g_{\text{K}}$), and a leak conductance ($g_L$). The governing equation for the membrane voltage $V_m$ is
+
+\begin{align*}
+    C_m \frac{dV_m}{dt} = -g_{\text{Na}}(V_m - E_{\text{Na}}) - g_{\text{K}}(V_m - E_K) - g_L(V_m - E_L) + I_{\text{ext}}
+\end{align*}
+
+where $E_{\text{Na}}$, $E_K$, and $E_L$ are the reversal (Nernst) potentials for sodium, potassium, and the leak current, respectively, and $I_{\text{ext}}$ is any externally applied current. The conductances $g_{\text{Na}}$ and $g_{\text{K}}$ are voltage-dependent and time-dependent, governed by gating variables that Hodgkin and Huxley determined empirically through voltage clamp experiments.
+
+\subsection{Myelination and Saltatory Conduction}
+
+The lab's first activity, which compares the capacitance of compressed versus uncompressed axon models, connects to the physiological importance of myelination. In the human nervous system, Schwann cells (in the peripheral nervous system) and oligodendrocytes (in the central nervous system) wrap layers of myelin around axons. This myelin sheath acts as an additional dielectric layer, dramatically increasing the effective plate separation $d$ in the capacitance formula, thereby reducing $C$.
+
+The reduced capacitance in myelinated regions means less charge needs to flow to change the membrane voltage, enabling faster signal propagation. The action potential effectively ``jumps'' from one node of Ranvier (a gap in the myelin) to the next in a process called saltatory conduction. This mechanism increases nerve conduction velocity from roughly 1--2~m/s in unmyelinated fibers to 70--120~m/s in large myelinated fibers.
+
+\subsection{Clinical Relevance: Demyelinating Diseases}
+
+The importance of myelination is underscored by demyelinating diseases such as multiple sclerosis (MS), in which the immune system attacks the myelin sheath. The resulting loss of myelin increases membrane capacitance in the affected regions, slows signal propagation, and can ultimately block conduction entirely. Symptoms range from numbness and weakness to vision loss and cognitive impairment, depending on which axons are affected. Understanding the axon as an electrical cable provides a clear physical framework for comprehending why myelin damage produces such devastating neurological effects.
+
+\subsection{The Cable Equation and Lord Kelvin}
+
+The cable model used in Activity 3 has a rich history that predates neuroscience. The mathematical formulation was first developed by William Thomson (Lord Kelvin) in the 1850s to analyze signal propagation in submarine telegraph cables. Kelvin recognized that a long underwater cable, with its conducting core surrounded by insulation and immersed in seawater, behaves as a distributed RC network---the same topology we constructed in our ladder circuit. Decades later, neuroscientists recognized that the same mathematics applies to axons, where the cytoplasm acts as the conducting core, the membrane as the insulation, and the extracellular fluid as the surrounding conductor.
+
+\end{document}
+
+\message{ !name(lab_report.tex) !offset(-319) }

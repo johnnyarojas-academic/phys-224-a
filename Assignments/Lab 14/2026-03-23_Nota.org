@@ -1,0 +1,5 @@
+#+title: 2026 03 23 Notas de Laboratorio, Series de Balmer y la Constante Rydberg
+
+* Activity Notes
+** Activity 1: Using the Mercury Light Emitter
+We measured on a ruler the diffraction effect produced by the mercury laser. This gave us the

@@ -1,0 +1,58 @@
+#+title: Notes on the Axon Model Lab of Dr Vola
+
+* Introduction
+The main idea of this lab is that it explains the mechanics of axons modeled as
+an axon on an electrical circuit, more specifically, the capacitor component.
+
+The first model the we built on the lab is a sense a very similar design to the
+idealized model that we have built our intuition on --- the two plates separated
+by a insulator material. Our study of this idealized design will allow us to
+connect the idea of the capacitance formula.
+
+\begin{align*}
+C = Q/V \qquad \text{also written as} \qquad \frac{C = \epsilon_0 \epsilon_r A}{d}
+\end{align*}
+
+* Preliminary Work
+
+** Question 1: How does the capactiance depend on the overlapping area and the distance between the two "plates"?.
+
+Capacitance is defined as $Q = C|\Delta V|$ (extracted from Matter and Interactions
+page 769). Note that voltage for a sigle plate is equal to:
+
+\begin{align*}
+\Delta V &= -E \Delta x \qquad \text{(therefore:)}
+\\
+&= \frac{\sigma}{2\epsilon_0}\Delta x
+\end{align*}
+
+Two plates is the contribution of the voltage of one and the other:
+
+\begin{align*}
+\Delta V &= -E \Delta x \qquad \text{(therefore:)}
+\\
+&= \frac{\sigma}{\epsilon_0}\Delta x
+\end{align*}
+
+Rearranging:
+
+\begin{align*}
+\frac{Q}{|\Delta V|} &= C \qquad \text{Replace: } |\Delta V|
+\\
+\frac{Q}{\frac{\sigma}{\epsilon_o}d} &= C
+\end{align*}
+
+Rearranging:
+
+\begin{align*}
+\frac{Q \epsilon_0}{\sigma d} &= C
+\\
+\frac{Q \epsilon_0}{\frac{Q}{A} d} &= C
+\\
+\frac{\epsilon_0 A}{d} &= C
+\end{align*}
+
+** Question 2: Two capacitors C1 and C2 are mounted in parallel, how would the equivalent capacitance be compared to C1 and C2? Would the equivalent capacitor be bigger if C1 and C2 were mounted in series? Give argument(s) why the myelinated axons have lower capacitance than unmyelinated ones. You may use sketches and pictures.
+
+For capacitors in series the capacitance drops because if we where to replace it
+with an equivalent capacitor

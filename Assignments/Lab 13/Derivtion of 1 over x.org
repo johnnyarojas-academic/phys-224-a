@@ -1,0 +1,249 @@
+#+TITLE: Deriving the Integral of 1/x from First Principles
+#+AUTHOR:
+#+DATE:
+#+OPTIONS: toc:t num:t
+
+* Overview
+
+The goal is to derive $\int_1^x \frac{1}{t} \, dt$ from scratch, using
+nothing but the Binomial Theorem and the definition of the integral as a
+Riemann sum. The result will naturally produce the logarithm, and we will
+see /why/ $\ln(x)$ is the right name for this function.
+
+The road map is:
+
+1. *Binomial Theorem* — expand $(1 + u)^n$ for any real exponent.
+2. *Riemann sum for* $\int_1^x t^n \, dt$ — integrate a monomial by summing
+   rectangles and taking a limit.
+3. *Set* $n = -1$ — watch what goes wrong and how to fix it.
+4. *Recover the sum* — the fix produces the series for $\ln(x)$ and
+   identifies the integral with the logarithm.
+
+-----
+
+* 1. The Binomial Theorem
+
+** Statement
+
+For Any real number $r$ and $|u| < 1$:
+
+\begin{align*}
+  (1 + u)^r
+  &= \sum_{k=0}^{\infty} \binom{r}{k} u^k \\
+  &= 1 + ru + \frac{r(r-1)}{2!}u^2 + \frac{r(r-1)(r-2)}{3!}u^3 + \cdots
+\end{align*}
+
+where the generalised binomial coefficient is defined as:
+
+\begin{align*}
+  \binom{r}{k} = \frac{r(r-1)(r-2)\cdots(r-k+1)}{k!}
+\end{align*}
+
+This extends the familiar integer-exponent binomial theorem to /any/ real
+(or even complex) exponent $r$.
+
+** The case we need: $r = n$, a positive integer first
+
+For a positive integer $n$ the series terminates and gives the familiar
+polynomial. This is what lets us integrate $t^n$ cleanly. The case $r = -1$
+is where the story gets interesting.
+
+-----
+
+* 2. Integrating a Monomial: $\int_1^x t^n \, dt$
+
+** Riemann sum setup
+
+Partition the interval $[1, x]$ into $N$ subintervals. To keep the algebra
+clean, use a *geometric partition* — points spaced by a constant ratio
+$\rho = x^{1/N}$ rather than a constant width:
+
+\begin{align*}
+  t_k = \rho^k, \quad k = 0, 1, \dots, N, \qquad \rho = x^{1/N}
+\end{align*}
+
+The width of the $k$-th subinterval is:
+
+\begin{align*}
+  \Delta t_k = t_k - t_{k-1} = \rho^k - \rho^{k-1} = \rho^{k-1}(\rho - 1)
+\end{align*}
+
+Using the left endpoint $t_{k-1} = \rho^{k-1}$ to evaluate $f(t) = t^n$,
+the Riemann sum is:
+
+\begin{align*}
+  S_N
+  = \sum_{k=1}^{N} t_{k-1}^n \cdot \Delta t_k
+  = \sum_{k=1}^{N} \rho^{(k-1)n} \cdot \rho^{k-1}(\rho - 1)
+  = (\rho - 1) \sum_{k=1}^{N} \rho^{(k-1)(n+1)}
+\end{align*}
+
+** Evaluating the geometric series
+
+The sum is a geometric series with ratio $\rho^{n+1}$:
+
+\begin{align*}
+  \sum_{k=1}^{N} \rho^{(k-1)(n+1)}
+  = \frac{\rho^{N(n+1)} - 1}{\rho^{n+1} - 1}
+  = \frac{x^{n+1} - 1}{\rho^{n+1} - 1}
+\end{align*}
+
+since $\rho^N = x$. So the Riemann sum becomes:
+
+\begin{align*}
+  S_N = (\rho - 1) \cdot \frac{x^{n+1} - 1}{\rho^{n+1} - 1}
+\end{align*}
+
+** Taking the limit $N \to \infty$ (i.e. $\rho \to 1$)
+
+As $N \to \infty$, $\rho = x^{1/N} \to 1$. Apply L'Hôpital (or the
+standard limit $\lim_{u \to 0} \frac{u}{e^u - 1} = 1$ with $u = \ln\rho$):
+
+\begin{align*}
+  \lim_{\rho \to 1} \frac{\rho - 1}{\rho^{n+1} - 1} = \frac{1}{n+1}
+\end{align*}
+
+Therefore:
+
+\begin{align*}
+  \int_1^x t^n \, dt = \frac{x^{n+1} - 1}{n+1}, \qquad n \neq -1
+\end{align*}
+
+This is exactly the power rule. Note the denominator $n+1$ — it blows up
+when $n = -1$, which is precisely the case we want.
+
+-----
+
+* 3. The Problem at $n = -1$
+
+Plugging $n = -1$ into the formula gives $\frac{x^0 - 1}{0} = \frac{0}{0}$,
+which is undefined. The power rule has a gap exactly at $\frac{1}{t}$.
+
+But the Riemann sum is still well-defined! Go back to it with $n = -1$:
+
+\begin{align*}
+  S_N
+  = (\rho - 1) \cdot \frac{x^{0} - 1}{\rho^{0} - 1}
+\end{align*}
+
+This is also $\frac{0}{0}$, but only because we substituted $\rho^N = x$
+too early. Before that substitution the sum with $n = -1$ is:
+
+\begin{align*}
+  S_N
+  = \sum_{k=1}^{N} \rho^{(k-1)(-1)} \cdot \rho^{k-1}(\rho - 1)
+  = \sum_{k=1}^{N} (\rho - 1)
+  = N(\rho - 1)
+\end{align*}
+
+Every $\rho$-power cancels. The sum collapses to the beautifully simple
+expression $N(\rho - 1)$.
+
+-----
+
+* 4. Evaluating $N(\rho - 1)$ as $N \to \infty$
+
+** The key limit
+
+With $\rho = x^{1/N}$ we have:
+
+\begin{align*}
+  N(\rho - 1) = N\!\left(x^{1/N} - 1\right)
+\end{align*}
+
+Let $u = \frac{\ln x}{N}$, so $x^{1/N} = e^u$ and $u \to 0$ as
+$N \to \infty$:
+
+\begin{align*}
+  N(x^{1/N} - 1)
+  = \frac{e^u - 1}{u} \cdot \ln x
+  \xrightarrow{u \to 0} 1 \cdot \ln x = \ln x
+\end{align*}
+
+using the standard limit $\lim_{u \to 0} \frac{e^u - 1}{u} = 1$.
+
+** Result
+
+\begin{align*}
+  \boxed{\int_1^x \frac{1}{t} \, dt = \ln x}
+\end{align*}
+
+The integral exists and equals $\ln x$ — the power rule's gap is filled by
+the logarithm.
+
+-----
+
+* 5. Connecting to the Binomial Series
+
+The Binomial Theorem gives us an independent path to the same answer via a
+series. Write $\frac{1}{t} = \frac{1}{1-(1-t)}$ and expand near $t = 1$.
+More directly, substitute $t = 1 + u$ and expand $\frac{1}{1+u}$ using
+$r = -1$ in the Binomial Theorem:
+
+\begin{align*}
+  \frac{1}{1+u}
+  = \sum_{k=0}^{\infty} (-1)^k u^k
+  = 1 - u + u^2 - u^3 + \cdots, \qquad |u| < 1
+\end{align*}
+
+Integrate term by term from $0$ to $x - 1$ (i.e. from $t=1$ to $t=x$,
+setting $u = t - 1$):
+
+\begin{align*}
+  \int_1^x \frac{1}{t}\,dt
+  &= \int_0^{x-1} \frac{1}{1+u}\,du \\
+  &= \int_0^{x-1} \left(1 - u + u^2 - u^3 + \cdots\right) du \\
+  &= \left[u - \frac{u^2}{2} + \frac{u^3}{3} - \frac{u^4}{4} + \cdots\right]_0^{x-1}
+\end{align*}
+
+Setting $v = x - 1$:
+
+\begin{align*}
+  \int_1^x \frac{1}{t}\,dt
+  = v - \frac{v^2}{2} + \frac{v^3}{3} - \cdots
+  = \sum_{k=1}^{\infty} \frac{(-1)^{k+1}}{k}(x-1)^k
+\end{align*}
+
+This is exactly the Taylor series for $\ln(x)$ around $x = 1$, confirming
+both paths agree.
+
+-----
+
+* 6. Why the Logarithm?
+
+It is worth pausing to note /why/ this function deserves to be called a
+logarithm. Define:
+
+\begin{align*}
+  L(x) = \int_1^x \frac{1}{t}\,dt
+\end{align*}
+
+One can show directly from the integral (by a change of variables $t \mapsto
+at$) that:
+
+\begin{align*}
+  L(ab) = L(a) + L(b)
+\end{align*}
+
+This is the defining property of a logarithm. The base $e$ is the unique
+number satisfying $L(e) = 1$, i.e.:
+
+\begin{align*}
+  \int_1^e \frac{1}{t}\,dt = 1
+\end{align*}
+
+So $L(x) = \ln x$ is not a coincidence — the integral /is/ the logarithm,
+by definition.
+
+-----
+
+* Summary
+
+| Step | Tool | Result |
+|------+---------------------------+-------------------------------|
+| 1 | Binomial Theorem ($r=-1$) | Series for $\frac{1}{1+u}$ |
+| 2 | Geometric Riemann sum | $\int_1^x t^n dt = \frac{x^{n+1}-1}{n+1}$ |
+| 3 | $n=-1$ cancellation | Sum collapses to $N(\rho-1)$ |
+| 4 | Limit $N \to \infty$ | $N(x^{1/N}-1) \to \ln x$ |
+| 5 | Term-by-term integration | Series for $\ln x$ confirmed |
+| 6 | Functional equation | $L(ab)=L(a)+L(b)$ identifies $L = \ln$ |
