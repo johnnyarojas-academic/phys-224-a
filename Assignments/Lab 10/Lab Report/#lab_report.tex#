@@ -1,0 +1,214 @@
+\documentclass[12pt]{article}
+% Basic packages
+\usepackage[utf8]{inputenc}   % UTF-8 encoding
+\usepackage{geometry}          % Page margins
+\usepackage{setspace}          % Double spacing
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{graphicx}         % Include images
+\usepackage{booktabs}         % Nice tables
+\usepackage{enumitem}         % Custom lists
+\usepackage{cancel}
+\usepackage{float}
+
+% Page setup: 1-inch margins
+\geometry{
+  letterpaper,
+  margin=1in
+}
+
+% Double spacing
+\doublespacing{}
+
+% START OF DOCUMENT %
+\begin{document}
+
+\begin{center}
+    {\textbf{Johnny A. Rojas \& Aiden Sitorus, George Nicacio, Jeremiah
+        Hasibuan, Matthew Miller}}\\
+    {\Large \textbf{OHM'S LAW}}
+  \end{center}]\
+  
+
+\section{Theory}
+
+Electric circuits are essentially combinations of electrical devices that
+provide a pathway, potentially enabling charges to move. To understand how this
+movement happens, we rely on a fundamental principle known as Ohm's law. Ohm's
+law states that the loss of energy per charge, or potential difference $(V)$,
+dictates how electricity behaves in a conductor, represented by the
+formula:
+\begin{equation}
+    V = IR
+\end{equation}
+where:
+\begin{itemize}
+    \item $V$ is the electric potential difference, or voltage (in volts, V)
+    \item $I$ is the electric current (in amperes, A)
+    \item $R$ is the electrical resistance (in ohms, $\Omega$)
+\end{itemize}
+
+To make voltage and current easily distinguishable, it helps to think of an
+electrical circuit like a plumbing system. The electric current, represented by
+$I$, is the actual physical flow of water moving through the pipes. In a circuit,
+current is the flow of charged particles, like electrons. Mathematically, it is
+defined as the rate of charge flow over time, given by the formula:
+\begin{equation}
+    I = \frac{q}{t}
+\end{equation}
+where:
+\begin{itemize}
+    \item $I$ is the electric current (in amperes, A)
+    \item $q$ is the amount of flowing charge (in coulombs, C)
+    \item $t$ is the elapsed time (in seconds, s)
+\end{itemize}
+
+However, for water to flow through a pipe, it needs a push. In our analogy, that
+push comes from a water pump, which acts just like a battery in an electric
+circuit. The battery provides an electric potential difference, or voltage $(V)$.
+Voltage is the energy per charge, measured in units of volts. Positively charged
+particles naturally want to move from an area of higher electric potential to a
+lower electric potential.
+
+Finally, we have the pipes themselves. If a pipe is incredibly narrow, the water
+will have a hard time getting through. In a circuit, this bottleneck is called
+resistance $(R)$, measured in ohms $(\Omega)$. Resistors are simply materials that
+decrease the flow of charges by dissipating the energy in the form of heat.
+
+By understanding Ohm's law, we can fully justify our experimentation. Equation 2
+$(V=IR)$ tells us that an electric potential difference $(V)$ will drive an
+electric current $I$ given by $V/R$. Therefore, if we know the voltage pushing
+the charges and the current flowing through, we can make a prediction of the
+resistance. This lab tests whether these theoretical relationships hold up in
+real, physical circuits when we arrange carbon resistors in different ways, such
+as series or side-by-side in parallel.
+
+\section{Conclusion}
+\subsection*{Activity 1: Carbon Resistors}
+On Activity 1, our team explored the properties of carbon resistors by first
+identifying them using their standard color codes and then physically measuring
+their resistance using an ohmmeter. We measured four resistors with values of
+$326 \Omega$, $985 \Omega$, $10 020 \Omega$, and $21 600 \Omega$, which showed
+an extremely low percent difference from the predicted color code
+values—specifically $1.21 \%$, $1.50 \%$, $0.20 \%$, and $1.82 \%$ respectively.
+Furthermore, when we mounted the resistors in series, we observed that their
+total resistance accurately summed up to match our predictions,
+yielding $1 330 \Omega$ for two resistors (only a $1.44 \%$ error) and an
+impressive $33 000 \Omega$ for all four together (just a $0.21 \%$ error from
+the expected  $32,931 \Omega$). When we mounted them in parallel, the combined
+resistance appropriately dropped lower than the smallest individual resistor,
+measuring $6 800 \Omega$ and $243 \Omega$ for two different pairs, closely
+tracking the theoretical inverse addition predictions of $6 844.8 \Omega$
+and $244.9 \Omega$.
+
+\subsection*{Activity 2: Ohm's Law}
+For Activity 2, we directly tested Ohm's law by placing our resistors in series
+with a direct current (DC) power supply. We utilized a multimeter as a voltmeter
+to measure the $6 V$ potential difference across the resistors and as an ammeter
+to measure the electric current flowing through them. After analyzing the data,
+our team measured voltage-to-current slope values of
+approximately $2206$, $327.9$, $566.0$, and $1000$ $V/A$ for the individual
+components. Furthermore, when testing the complete configuration, we measured an
+overall system value of $897 \Omega$, which cleanly correlates to the calculated
+theoretical resistance of the circuit $(896.8 \Omega)$. Overall, we found an
+a consistent correlation between our experimental data and the theoretical
+predictions, making it possible to safely validate Ohm's law and establish the
+rules for how resistance adds up in both series and parallel configurations.
+
+\section{Questions}
+
+\subsection*{Activity 1 Questions}
+
+\begin{enumerate}
+  \item \textbf{Compare the measured values of the four carbon resistors with
+        their color code values and discuss the percent difference.} \\
+        The four selected resistors had expected color-code values
+        of $330~\Omega$, $1000~\Omega$, $10000~\Omega$, and $22000~\Omega$. When
+        measured with an ohmmeter, the actual resistances
+        were $326~\Omega$, $985~\Omega$, $10020~\Omega$, and $21600~\Omega$. The
+        percent differences were exceedingly low b$1.21\%$, $1.50\%$, $0.20\%$,
+        and $1.82\%$, respectively, demonstrating that the color-code bands
+        provide a highly reliable estimation of a carbon resistor's true value.
+
+  \item \textbf{Infer a simple rule for resistors in series. What is the
+        expected value of the four resistors all mounted in series, and how does
+        it compare to the actual measurement?} \\
+        Based on the initial measurements, when resistors are mounted
+        head-to-tail in series, their equivalent resistance is simply the sum of
+        their individual resistances. Using this additive rule, the expected
+        total resistance for all four components in series is $32931~\Omega$.
+        The physical measurement yielded $33000~\Omega$, which is only
+        a $0.21\%$ error, firmly supporting the series addition rule.
+
+  \item \textbf{How is the new resistance of a parallel circuit related to the
+        individual values? Predict the resistance of the first and second
+        resistors mounted in parallel and compare with the actual measurement.}
+        \\
+        For resistors mounted in parallel, the inverse of the total equivalent
+        resistance is equal to the sum of the inverses of each individual
+        resistance. Using this relationship, the expected parallel resistance
+        of $R_1$ ($326~\Omega$) and $R_2$ ($985~\Omega$) was calculated to
+        be $244.9~\Omega$. The actual ohmmeter measurement was $243~\Omega$,
+        confirming that parallel configurations decrease the overall resistance
+        of the pathway.
+
+\end{enumerate}
+
+\subsection*{Activity 2 Questions}
+
+\begin{enumerate}
+  \item \textbf{From your results, infer four general rules about voltages and
+        currents in series and parallel configurations.} \\
+        Based on the circuit behavior, the four established rules are: (1) In a
+        series circuit, the electric current ($I$) remains constant across all
+        components. (2) In a series circuit, the total voltage ($V$) is the sum
+        of the individual voltage drops. (3) In a parallel circuit, the voltage
+        ($V$) remains constant across all branches. (4) In a parallel circuit,
+        the total electric current ($I$) is the sum of the currents flowing
+        through each individual branch.
+
+  \item \textbf{Using Ohm's law, measure the total resistance between points a
+        and d. Explain your method.} \\
+        To calculate the total resistance using Ohm's law ($R = V/I$), the total
+        electric potential difference supplied by the DC battery ($6\text{ V}$)
+        was divided by the total electric current entering the circuit at point
+        ``a''. This mathematical approach treats the entire complex circuit as a
+        single equivalent resistor.
+
+  \item \textbf{Find the expected equivalent resistance between a and d using
+        the established rules, and compare it with the multimeter measurement.}
+        \\
+        Using the series and parallel addition rules established in Activity 1,
+        the theoretical equivalent resistance for the entire circuit was
+        calculated to be $896.8~\Omega$. When the physical circuit was tested
+        with a multimeter, the measured total resistance between ``a'' and ``d'' was
+        exactly $897~\Omega$. This near-perfect alignment validates both Ohm's
+        law and the theoretical rules for circuit analysis.
+\end{enumerate}
+
+\section{Above and Beyond}
+
+While building simple circuits on a lab bench might seem like an abstract
+exercise, the principles behind Ohm's law form the foundation of the modern
+digital world. When we investigate how resistors limit current and drop
+voltage, we aren't just looking at the dissipation of heat; at a deeper level we
+are looking at a form of control.
+
+Historically, early scientists and engineers realized that by carefully
+arranging electrical components like resistors, they could dictate exactly how
+electricity flows through a system. This ability to easily manipulate voltage
+levels became a powerful way to represent information. A high voltage could
+signify a $1$, and a low voltage could signify a $0$.
+
+By arranging these electrical components into deliberate patterns, engineers and
+scientists discovered how to construct physical logic gates. This was a
+revolutionary breakthrough because it established a direct connection between
+electrical behavior and Boolean algebra. It is incredibly profound to realize
+that the exact same natural phenomenon that causes a tiny carbon resistor to
+warm up during our lab experiment is the very mechanism that, when scaled into
+microprocessors, allows us to calculate satellite trajectories, render
+incredible graphics, and even process the text of this document. Nature provided
+us with the predictable relationship between voltage, current, and resistance;
+and the human ingenuity that harnessed that relationship to construct the computing
+machines we take for granted today.
+
+\end{document}
