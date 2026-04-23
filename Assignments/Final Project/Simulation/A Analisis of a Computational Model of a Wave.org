@@ -24,4 +24,13 @@ y = 1 - \cos(2 \pi f t)
 
 Using the cosine function instead of the sine function allows us to make or starting position to math the real apparatus that we have, which starts at y = 0, the $2\pi f$ allows us to set the frequency of the oscillation.
 
+*** Visualization
+[[file:Graphics/Example.png]]
+
+** Wave Propagation and Reflections
+Now that we have modeled the position of our right point we can start analyzing its behavior of the wave after being induced. In our real apparatus our left point is located 95cm from the right point and has a tension of 10 grams.
+
+Since we have defined the y position of the right point, we can start to ask us how will this point will generate the waves across the left side. We can think of the minimum y value, or the bottom of the weight traveling through the left.
+
+
 
